@@ -1,0 +1,112 @@
+.container {
+    margin-left: 15%;
+    margin-top: 10%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: space-between
+}
+
+.main{
+    width: 70%;
+}
+
+
+.header{
+    font-family: "Montserrat Semibold", Helvetica, sans-serif;
+    font-size: 32px;
+    color: #464646; 
+}
+
+.highlight{
+    background: linear-gradient(to top, #AFDFE4 60%, transparent 40%);
+    /*transition: linear-gradient 0.2s;*/ 
+}
+
+/*
+.highlight:hover {
+    background: linear-gradient(to top, #AFDFE4 100%, transparent 0%);
+}*/
+
+.bodycopy{
+    font-family: "Montserrat", Helvetica, sans-serif; 
+    font-size: 13px; 
+    line-height: 250%;
+    color: #464646;
+}
+
+a:link{
+    color: #464646;
+    text-decoration: none;
+}
+
+
+a:visited{
+    color: #464646;
+    text-decoration: none; 
+}
+
+.rotate{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    /*transform: rotate(90deg);
+
+    transform-origin: right;
+    margin-left: 60%;
+    margin-top: 
+    width: 29%;*/
+}
+
+.projects-container {
+    margin-left: 15%;
+    margin-top: 100px;
+    margin-right: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.project {
+    width: 100%;
+    height: 325px;
+    background-color: #464646;
+    position: relative;
+}
+
+.project:after, .project:before {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.project:after {
+    content: '\A';
+    width: 100%; height:100%;
+    top: 0; left:0;
+    background: #AFDFE4;
+}
+
+.project:before {
+    content: attr(data-content);
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+    bottom: 45%;
+    /*padding: 4px 10px;*/
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    font-family: "Montserrat Semibold", Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+.project:hover:after, .project:hover:before {
+    opacity: 0.9;
+}
+
+@media only screen and (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
