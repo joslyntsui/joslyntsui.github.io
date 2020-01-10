@@ -41,15 +41,47 @@ body {
 
 
 
-.highlight{
+/* .highlight{
     background: linear-gradient(to top, #AFDFE4 60%, transparent 40%);
-    /*transition: linear-gradient 0.2s;*/ 
+    transition: linear-gradient 0.2s; 
+} */
+
+.highlight {
+    display: inline-block;
+    position: relative;
 }
 
-/*
-.highlight:hover {
+
+.highlight::before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 55%;
+    bottom: 5px;
+    left: 5px;
+
     background: linear-gradient(to top, #AFDFE4 100%, transparent 0%);
-}*/
+}
+
+.highlight.swipe-up::before {
+    transition: 250ms height;
+    height: 5%;
+}
+
+.highlight.swipe-up:hover::before {
+    height: 55%;
+}
+
+.highlight.swipe-right::before {
+    transition: 250ms width;
+    width: 0;
+}
+
+.highlight.swipe-right:hover::before {
+    width: 95%;
+}
 
 .bodycopy{
     font-family: 'Montserrat', Helvetica, sans-serif; 
