@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon.png" />
+    <title>
+      Mentor Paging App
+    </title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nfw8lgh.css" />
+  </head>
+
+  <body>
+    <div id="case-container">
+      <div id="nav">
+        <ul>
+          <li><a href="index.html" class="highlight swipe-right"> Work </a></li>
+          <li><a href="#" class="highlight swipe-right"> About </a></li>
+          <li>
+            <a
+              href="Assets/Resume.pdf"
+              target="_blank"
+              class="highlight swipe-right"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+      <img src="Assets/mentor-paging-hero.png" width="100%" />
+
+      <h1>Mentor Paging App</h1>
+      <p>
+        Role: Product Designer <br />
+        Timeline: 2 Month (July - August 2019) <br />
+        Team: 1 Product Designer, 1 Developer
+      </p>
+      <br />
+      <h2>Overview</h2>
+      <p>
+        StarterHacks is a weekend-long tech competition focused on beginners
+        where students can come together to build a product and pitch their
+        ideas to judges. Mentors are present throughout the entire weekend to
+        offer guidance and support for the first-time hackers. Students can
+        reach out to mentors for assistance in three streams: development,
+        design, and business.
+      </p>
+      <br />
+      <h2>The Problem</h2>
+      <p>
+        For hackers to reach out to mentors for help, there is a dedicated
+        channel within the hackathon wide Slack workspace where hackers can post
+        their problems. Available mentors can then browse through the help
+        requests and contact the hacker through slack. With over a thousand
+        attendees, this channel can get cluttered and disorganized very quickly.
+        Mentors get flooded and whether or not a hacker has been attended to is
+        unclear.
+      </p>
+      <br />
+      <h2>The Solution</h2>
+      <p>
+        For StarterHacks 2019, the organizing team quickly created the Mentor
+        Paging App. There are two types of users: hackers and mentors. Through
+        the Paging App:
+      </p>
+      <ul>
+        <li>Hackers can submit a help request into a pool of requests</li>
+        <li>Mentors can browse and filter through those requests</li>
+        <li>
+          Mentors can claim a request, attend to the hacker, and solve the
+          request
+        </li>
+        <li>
+          Hackers and mentors can easily access each other’s contact information
+        </li>
+      </ul>
+      <p>
+        I took over as the product designer for the app after StarterHacks 2019
+        had concluded. My focus was to iterate and improve upon the existing app
+        as well as work closely with the developers to ensure that the app can
+        be developed in time.
+      </p>
+      <h4>Constraints</h4>
+      <ul>
+        <li>Time (2 months)</li>
+        <li>Resources (1 Designer, 1 Developer)</li>
+        <li>Branding was a work in progress</li>
+      </ul>
+      <p>
+        Google Material Design was used for wireframes so that the marketing
+        team could just stylize the components with the appropriate colours and
+        fonts.
+      </p>
+      <h4>Information Architecture</h4>
+      <p>
+        The user flow and information architecture was created with tech
+        feasibility in mind. It was a tool for communication between the
+        developer and I to understand where the large amounths of information
+        was being pulled from and where it is being displayed and used.
+      </p>
+      <p>
+        There are separate flows for the hackers and mentors but information is
+        being passed between the two as they share the same database. Users will
+        be presented with a different view and different functionalities
+        depending on if they sign up as a hacker or a mentor, thus requiring a
+        different user flow for each.
+      </p>
+      <br />
+      <img src="Assets/information-architecture.png" width="100%" />
+      <p>
+        Within the flow, details pertaining to the type of information that
+        would need to be stored is document as well as its origin. There are
+        also notes made for the developer indicating behaviour.
+      </p>
+      <h4>2019 &rarr; 2020</h4>
+      <p>
+        I interviewed a few hackers and mentors from StarterHacks 2019 to learn
+        more about their experience with the first iteration of the paging app.
+      </p>
+      <h5>Hacker View Insights and Improvements</h5>
+      <p>Pain points:</p>
+      <ul>
+        <li>
+          Many unnecessary requests in the pool and excess clutter on the mentor
+          side – hackers had no way of accessing a request once it had been
+          submitted
+        </li>
+        <li>
+          Users felt left in the dark and confused about what happens after the
+          request had been submitted – they had no access to the request and no
+          updates after submission
+        </li>
+        <li>
+          Too many emails – all notifications (request submission confirmation,
+          request claimed, etc.) were sent via email
+        </li>
+        <li>
+          Entry of information was repetitive and tedious – hackers had to enter
+          some information that was constant (ex. Name, email, slack handle,
+          etc.) each and every time they create a new request.
+        </li>
+      </ul>
+      <p>
+        For the MVP, we added the ability to edit or delete a card even after it
+        had been submitted in addition to the creation of a new help request to
+        give users more autonomy and flexibility. It keeps the requests in the
+        pool relevant and up-to-date. Clutter is reduced by allowing hackers to
+        delete requests if they were able to solve it on their own after
+        submission.
+      </p>
+      <img src="Assets/edit-delete.png" width="100%" />
+      <p class="caption">Edit and Delete functions added for user automony</p>
+      <br />
+      <p>
+        Hackers can also see the status of the card so that they know if a
+        mentor has seen it and is on the way to help them so that they can
+        remain informed without their email inbox being blown up. If a card has
+        been claimed, the hacker can also view the mentor’s profile (as shown
+        above) to get a little background and contact information to help
+        nurture hacker-mentor relationships.
+      </p>
+      <img src="Assets/status-profile.png" width="100%" />
+      <p class="caption">
+        Left: 2018 screen after request submission. Right: 2020 status of
+        requests and viewing a mentor’s profile after a request has been
+        claimed.
+      </p>
+      <br />
+      <p>
+        The onboarding process was modified to include a profile creation upon
+        sign up. Here, hackers can input their contact information which is then
+        attached to each request that they create. Working with the developer,
+        we made so that certain information is saved (ex. Hacker’s current
+        location) and pre-filled each time and if the user were to change that
+        information, it would be pre-filled with the updated information in
+        future request creations. This change in the backend allows users to
+        enter certain information only once and easily update information that
+        changes semi-frequently.
+      </p>
+      <img src="Assets/profile-creation.png" width="100%" />
+      <p class="caption">
+        Left: Hacker profile creation. Right: Location field is pre-filled based
+        on what was last inputted in the previous request.
+      </p>
+      <br />
+      <h5>Mentor View Insights and Improvements</h5>
+      <p>Pain points:</p>
+      <ul>
+        <li>
+          Navigation and organization – having claimed request(s) live in a
+          separate tab from the general request pool was redundant as mentors
+          only claim and attend to one request at a time (edge case: claiming
+          other tickets submitted by the same hacker)
+        </li>
+        <li>
+          Unsure of what to search for – users didn’t know what they would use
+          the search bar for as they have no way of knowing what requests exists
+          in the pool
+        </li>
+        <li>
+          Entry of information was repetitive and tedious – likewise to hackers,
+          the mentors had to input their contact information every time they
+          wanted to claim a card
+        </li>
+      </ul>
+      <p>
+        In the 2020 iteration, there are no longer two tabs where the request
+        pool and claimed request lived separately, the claimed ticket is pinned
+        to the top of the screen and the pool continues to scroll beneath it.
+        This reminds users of the ticket and prompts them to attend to the
+        hacker rather than have it easily forgotten in a separate tab. It also
+        makes the navigation simpler.
+      </p>
+      <img src="Assets/mentor-nav.png" width="100%" />
+      <p class="caption">
+        Far Left: 2018 Request pool and claimed request tab. Right: 2020 Mentor
+        home screen; claimed ticket and request pool
+      </p>
+      <br />
+      <p>
+        The search functionality was removed as the users indicated that it
+        wasn’t of any use to them. The filter and sort function was kept as
+        users noted that it was more practical since the requests can be
+        bucketed together into their streams in an organized fashion.
+      </p>
+      <img src="Assets/filter-sort.png" width="100%" />
+      <p class="caption">Filter and sort by functions</p>
+      <br />
+      <p>
+        Mentors also got their own profiles where contact information can be
+        stored and linked to each card the claimed (similar to the hacker side
+        with request submission). Additionally, the mentor is able to view the
+        hacker’s profile via a request card and the hacker can view the mentor’s
+        profile once their request has been claimed. This helps connect hacker
+        to mentor in a much smoother and simpler way.
+      </p>
+      <br />
+      <h4>Usability Testing Results</h4>
+      <p>
+        We tested with frequent hackathon attendees (hackers and mentors) as
+        well as users who were at StarterHacks 2019. There were two common
+        points of confusion regarding both views:
+      </p>
+      <ol>
+        <li>Terminology & input format/content</li>
+        <li>Sign-up process</li>
+      </ol>
+      <p>
+        Users were most frequently confused by the use of the terms “stream” and
+        “slack handle”. Stream is what StarterHacks uses to refer to the role of
+        the hacker (development, design, or business); the confusion was easily
+        cleared up by changing the input format to a dropdown. For “slack
+        handle”, the input tag was changed to be more descriptive: “slack
+        display name”. Additionally, I used placeholder text to provide examples
+        of what information belongs in that text field. Field label was kept
+        outside of the field to lessen the short-term memory load on the user.
+        Adornments were used to help guide the user towards the correct input
+        format.
+      </p>
+      <img src="Assets/placeholder-adornments.png" width="100%" />
+      <p class="caption">Placeholder text and adornments</p>
+      <br />
+      <p>
+        Users were also confused by the sign-up process. They were unsure of
+        whether or not they needed to input an email and password on the landing
+        page if they wanted to sign up as the login and sign-up buttons were
+        similar. To address this pain point, I changed the landing page so that
+        the user is choosing to either sign-up or login without having to input
+        any information yet to make the two flows more distinct and separate.
+      </p>
+      <img src="Assets/sign-in-up.png" width="100%" />
+      <p class="caption">
+        Distinct separate flows for signing up and signing in
+      </p>
+      <br />
+      <h5>Hacker View Specific Results</h5>
+      <p>
+        Some users found the request creation form to be a bit long. All the
+        questions on the form are necessary, so I broke up the form into
+        sections with their own headers (information about the problem and how
+        to find the hacker) to help keep the user focused and make the form more
+        digestible by having bite size, similar themed sections.
+      </p>
+      <h5>Mentor View Specific Results</h5>
+      <p>
+        Users struggled to find and use the filter function and often resorted
+        to process of elimination to figure it out as a result of the icon
+        representing it being unintuitive. This was easily addressed by changing
+        the icon to one that is familiar to users.
+      </p>
+      <br />
+      <h2>Takeaways</h2>
+      <p>
+        <b>Dev Collaboration + Interaction Design</b><br />
+        I had to work and think in a different space and work under different
+        constraints and considerations on top of good design principles. It
+        highlighted just how important communication is and how critical it is
+        for designers to be able to understand dev language and to communicate
+        effectively to someone who doesn’t speak design. Working this closely
+        with a developer strengthened my interaction design skills as I thought
+        less about how things looked (especially since the branding team would
+        take over for high-fidelity) and more about what goes on behind the
+        scenes.
+      </p>
+      <p>
+        <b>Usability Testing</b><br />
+        Usability testing I learned very quickly that 90% of the time, my
+        assumptions are wrong. It really taught me to get out of my own designer
+        head and step into the user’s shoes. I learned how to formulate
+        usability testing questions and how to turn the results and insights
+        into meaningful design decisions.
+      </p>
+      <p>
+        <b>Scoping + User Testing</b><br />
+        I talked to various stakeholders before I designed anything; hackers,
+        mentors, StarterHacks organizers/founders, and previous designers.
+        Juggling the needs of the users (hacker and mentor), business goals, and
+        tech feasibility really challenged my product thinking skills. There
+        were a lot of tradeoffs and if I could re-do this part of the process, I
+        would have started off with a much smaller scope and then adding as the
+        project progressed. This made me a much more flexible and adaptable
+        designer who is able to make compromises and come up with alternative
+        solutions.
+      </p>
+      <br />
+      <p>
+        This project is far from done; there are so many other exciting features
+        that have yet to be flushed out that will help connect hackers and
+        mentors (but that’s a StarterHacks 2021 project). I am proud of the work
+        that was done for the MVP (particularly the information architecture)
+        but I would have liked to contribute more to the visual design and do
+        some prototyping. With a longer timeline, I would also do more rounds of
+        usability testing and explore how this project can be more than just a
+        mentor paging app; how might it really be an asset in a hacker-mentor
+        relationship?
+      </p>
+
+      <div class="end-container">
+        <div
+          style="font-family: 'Proxima Nova', Helvetica, sans-serif; font-size: 18px; font-weight: 500; color: #464646; text-align:center; margin-top:150px"
+        >
+          Say hello at
+          <span class="highlight"
+            ><a href="mailto:joslyn.tsui@gmail.com">joslyn.tsui@gmail.com</a
+            ><span style="color:#AFDFE4">...</span></span
+          >
+        </div>
+
+        <div
+          style="font-family: 'Proxima Nova', Helvetica, sans-serif; font-size: 15px; color: #A1A1A1; text-align: center; margin-top:50px; margin-bottom:50px;"
+        >
+          Made with lots of googling and one coconut.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
