@@ -326,3 +326,10 @@ li {
   line-height: 1.7em;
   color: #464646;
 }
+
+#statement {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+}

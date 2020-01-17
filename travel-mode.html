@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon-01.png" />
+    <title>
+      Travel Mode
+    </title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nfw8lgh.css" />
+  </head>
+
+  <body>
+    <div id="case-container">
+      <div id="nav">
+        <ul>
+          <li><a href="index.html" class="highlight swipe-right"> Work </a></li>
+          <li><a href="#" class="highlight swipe-right"> About </a></li>
+          <li>
+            <a
+              href="Assets/Resume.pdf"
+              target="_blank"
+              class="highlight swipe-right"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+      <img src="Assets/travel-mode-hero.png" width="100%" />
+      <h1>Travel Mode</h1>
+      <p>
+        Role: UX Designer <br />
+        Timeline: December 2019 - present (work in progress) <br />
+        Team: 2 UX Designers: myself and my friend/mentor,
+        <a
+          href="https://gracemmaa.github.io/portfolio/index.html"
+          class="highlight swipe-up"
+          target="_blank"
+          >Grace Ma</a
+        >
+      </p>
+      <br />
+      <p>
+        I studied abroad in Singapore during Fall 2019. While I was there, I
+        spent most of my weekends travelling, as one does when studying abroad.
+        I visited Japan, Korea, Hong Kong, Thailand, New Zealand, and Taiwan. My
+        travel buddies consisted of other exchange students from all over the
+        world. While we had a blast, we also struggled a lot with getting
+        around. Since we’re all students, we were travelling on a budget. We
+        generally avoided taking taxis and Ubers/Grabs because public
+        transportation was a lot cheaper. Needless to say, we got lost a couple
+        of times. So I thought to myself: how might we make navigating a foreign
+        country easier for travellers on a budget?
+      </p>
+      <br />
+      <h2>Personal Goals</h2>
+      <p>
+        As this was a passion project, I wanted to use this opportunity to grow
+        and develop my skills in various areas of design. I wanted to:
+      </p>
+      <ul>
+        <li>
+          Conduct my own user research and user testing, specifically user
+          interviews rather than just surveys
+        </li>
+        <li>Conduct market research</li>
+        <li>
+          Strengthen my product thinking by analyzing research findings to
+          develop a solution
+        </li>
+        <li>Explore different testing methods</li>
+        <li>
+          Really focus on the user experience and understand the users’ pain
+          points
+        </li>
+      </ul>
+      <br />
+      <h2>Problem Statement</h2>
+      <p class="highlight">
+        <span
+          style="font-family: 'proxima-nova', Helvetica, sans-serif;
+        font-size: 21px; font-weight: 600; text-align: center;"
+        >
+          Travellers have a hard time understanding how to get around in a
+          foreign country
+        </span>
+      </p>
+      <br />
+      <h2>Target Audience</h2>
+      <p>Budget travellers, students, backpackers</p>
+      <br />
+      <h2>Market Research</h2>
+      <p>
+        We looked at what currently exists to help travellers navigate a foreign
+        country:
+      </p>
+      <ul>
+        <li>
+          Google Maps
+          <ul>
+            <li>Route planning (how to get from point A to B)</li>
+            <li>Duration of trip</li>
+            <li>Cost of trip</li>
+            <li>Timetables (bus, subway/MRT)</li>
+            <li>Shows user’s live location</li>
+            <li>Real-time updates</li>
+            <li>
+              Various options: walking, driving, public transportation, biking,
+              taxi/Uber/Grab
+            </li>
+          </ul>
+        </li>
+        <li>
+          Travel blogs/articles and forums
+          <ul>
+            <li>
+              Types of information and depth varies from blog to blog, ranges
+              from general tips, behaviour/etiquette, passes, etc.
+            </li>
+            <li>Specific information regarding popular tourist attractions</li>
+            <li>Information may be outdated</li>
+          </ul>
+        </li>
+        <li>
+          City’s official transportation organization’s website
+          <ul>
+            <li>
+              Information about bus routes, subway lines (map), fares, updates
+              (ex. Closures, changes), schedules (ex. Buses, subways,
+              first/last, etc.)
+            </li>
+            <li>
+              Varies city to city (some have additional features ex. Trip
+              planning, card reload, etc.)
+            </li>
+          </ul>
+        </li>
+        <li>
+          Transit apps (ex. City’s official transportation organization’s app,
+          Next Bus, Citymapper, etc.)
+          <ul>
+            <li>
+              Official transit apps
+              <ul>
+                <li>Same information as the website, mobile friendly</li>
+              </ul>
+            </li>
+            <li>
+              Next bus
+              <ul>
+                <li>Shows nearby buses and when the next one comes</li>
+                <li>Bus timetables</li>
+                <li>Bus routes (stops along the route)</li>
+              </ul>
+            </li>
+            <li>
+              Citymapper, Kakao Maps, Apple Maps
+              <ul>
+                <li>Same as Google Maps, slight variations in format</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          City’s government tourist websites
+          <ul>
+            <li>
+              Typically provide information about getting to/from the airport
+              (from city)
+            </li>
+            <li>
+              Will provide directions to tourist attractions from “central” city
+              point
+            </li>
+          </ul>
+        </li>
+        <li>Travel agencies (guided tours)</li>
+        <li>
+          Word of mouth (ex. Asking locals, people who have travelled there
+          before, etc.)
+          <ul>
+            <li>Q&A style</li>
+            <li>General tips, post mortems, recommendations, etc.</li>
+          </ul>
+        </li>
+      </ul>
+      <br />
+      <h2>User Research</h2>
+      <p>
+        We came up with questions to learn more about the users’ current
+        experience while navigating a new environment. We started off by looking
+        at the journey holistically, starting from when the user decides on
+        travelling to a new destination all the way to arrival and getting
+        around day to day. We wanted to find out about their research process
+        (if any), if and how their experiences differed from location to
+        location, the smoothest part, what their obstacles are and how they
+        overcome them. We wanted to get the users to tell us stories about their
+        experiences.
+      </p>
+      <p>
+        I interviewed 5 users while I was still abroad. I interviewed exchange
+        students who travelled during their term abroad, particularly those who
+        are budget conscious. I also recorded down some information from casual
+        conversations with those that I was travelling with (but unofficially
+        interviewed). Grace and I also briefly surveyed and interviewed a
+        handful of users back in Canada who have travelled as well. The
+        participation criteria was:
+      </p>
+      <ul>
+        <li>Have travelled to and around a foreign country</li>
+        <li>Travelled on a budget</li>
+      </ul>
+      <br />
+      <h2>User Research Insights</h2>
+      <p><b>Travel and Research Tools</b></p>
+      <ul>
+        <li>
+          100% of users say that they use Google Maps when travelling (where
+          available)
+        </li>
+        <li>Travel blogs/forums are a popular research tool</li>
+        <li>
+          80% of users don’t officially do research before arrival
+          <ul>
+            <li>
+              Typically will be looking up places to go rather than how to get
+              there
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p><b>Pain Points</b></p>
+      <ul>
+        <li>
+          Language barrier: 4/5 users say that the majority of their struggles
+          were caused by the language barrier
+          <ul>
+            <li>
+              What is shown on Google Maps doesn’t always match what is written
+              on signs in reality
+            </li>
+          </ul>
+        </li>
+        <li>
+          Buses: 60% of users say that they had difficulty identifying bus
+          stops, buses, and which direction the buses were going
+        </li>
+      </ul>
+      <p><b>Other Considerations</b></p>
+      <ul>
+        <li>
+          Biggest factors that determine the mode of transportation chosen (in
+          order):
+          <ul>
+            <li>Cost</li>
+            <li>Time</li>
+            <li>Convenience</li>
+            <li>Safety</li>
+          </ul>
+        </li>
+        <li>
+          The mode of transportation will vary depending on if the user is
+          travelling alone or with others
+        </li>
+      </ul>
+      <br />
+      <h2>User Journey</h2>
+      <p>Here’s what a user’s typical journey looks like:</p>
+      <ol>
+        <li>Book flights to destination</li>
+        <li>
+          Google search attractions at destination and book accommodations based
+          on location of attractions
+        </li>
+        <li>
+          Google search how to get from the airport to the city/accommodation OR
+          figure it out upon arrival either via Google Maps or asking at the
+          airport
+        </li>
+        <li>
+          Figure out the logistics of public transportation at the airport by
+          going to the city’s public transportation’s help desk
+        </li>
+        <li>Arrive at accommodation</li>
+        <li>
+          Use Google Maps to:
+          <ul>
+            <li>Figure out how to get to a destination</li>
+            <li>Explore what is in the are (ex. Food, attractions, etc.)</li>
+            <li>Plan out schedule</li>
+          </ul>
+        </li>
+        <li>
+          Consult general Google search to fill in gaps in information (if any)
+          that Google Maps may missed
+        </li>
+      </ol>
+      <br />
+      <h2>Product Considerations</h2>
+      <p>
+        As users were figuring out things as they went on the go, we started
+        with a solution that was mobile friendly. We were debating between a
+        stand-alone app or web app but decided to design an integration with
+        Google Maps instead considering that 100% of the users said that they
+        rely heavily on it. A few users also mentioned that they found it
+        annoying to have to download apps and then uninstall it afterwards when
+        they have no more purpose. The pain point that we wanted to focus on was
+        the language barrier as it was the source of the majority of the users’
+        struggles.
+      </p>
+      <br />
+      <h4>Lost In Translation</h4>
+      <p>
+        Users found that Google Maps would often romanize station and stop names
+        but the names written on signs in reality are often in the local
+        language. This leads to a disconnect that causes users to be confused
+        and struggle with identifying where they are and where they need to go.
+        On the flip side, there are certain regions where station and stop names
+        are shown in Google Maps only in the local language. Users noted that
+        while they are able to match what is shown in the app to signs in
+        reality, it’s difficult if they are completely unfamiliar with the
+        language and with the short amount of time that they have
+        stopped/passing through a station/stop.
+      </p>
+      <img src="Assets/romanized-local.png" width="100%" />
+      <p class="caption">
+        Left: Romanized station names in Japan. Right: Station names written in
+        Thai only in Thailand
+      </p>
+      <br />
+      <p>
+        We decided to add both the romanized name as well as the name in the
+        local language. That way, users have two references to help them orient
+        themselves. Users noted that with just the romanized name itself, they
+        would get confused by other stations with similar sounding names. By
+        having the local name, users can “picture” match it with the signs to
+        ensure that they are where they need to be.
+      </p>
+      <br />
+      <h4>Sound it Out</h4>
+      <p>
+        We were informed that most transportation systems will audioally
+        announce the upcoming stop/station. This, along with the pre-existing
+        romanized names on Google Maps, users could get a sense of where they
+        were. However, users are unable to discern tones or proper pronunciation
+        if they are unfamiliar with the language which can be confusing if there
+        are other stations of similar sounding names.
+      </p>
+      <p>
+        The feature we added was an audio feature, similar to the one in Google
+        Translate. Users are able to play the name of the station (spoken in the
+        local language) so that they can verify with the announcements.
+      </p>
+      <br />
+      <h4>In Between</h4>
+      <p>
+        Currently, Google Maps displays the transition between modes of
+        transportation (bus to subway/MRT and vice versa) but it only displays
+        the distance and walk time. When the user taps into its details, it
+        zooms into the map showing the path. However, many stations are above or
+        below ground with few entrances. Additionally, some stations can get
+        rather complicated, whether it be that it’s a transfer point and has
+        multiple platforms, hidden away, or in a really busy area (ex. In a
+        mall). 80% of users said that they struggled to navigate the stations.
+      </p>
+      <img src="Assets/in-between.png" width="100%" />
+      <p class="caption">
+        Left: Description of transfer point. Right: What is shown when user taps
+        on “Walk about 2 min”
+      </p>
+      <br />
+      <p>
+        Google Maps provides a great amount of detail for buses and subways/MRT,
+        but not for the steps in between. The app also provides good directions
+        for getting around by foot. We wanted to bridge the steps between modes
+        of transportation to make the entire journey for the user seamless and
+        smooth. We created a “walking tour” of the station in the same style as
+        Google Maps’ walking directions.
+      </p>
+      <img src="Assets/walking-directions.png" width="100%" />
+      <p class="caption">
+        Left: Steps detailing walking directions. Right: Photos to help orient
+        the user.
+      </p>
+      <br />
+      <p>
+        Pictures are included to help visually guide the user through the
+        station with directions indicating not just the flat plane but also the
+        vertical plane (ex. How many floors up or down to go). It is designed in
+        the same style as the walking directions in Google Maps since users are
+        already familiar with it.
+      </p>
+      <br />
+      <h4>Flexible Integration</h4>
+      <p>
+        We chose to integrate our product with Google Maps to decrease the
+        effort that users would have to go through to use it. Most people have
+        Google Maps as it is installed on every Android device and even iOS
+        users tend to have a strong preference for Google Maps over Apple Maps.
+        Surveyed users noted that they still use Google Maps even when they’re
+        in a city that they’re familiar with (not just when they’re travelling)
+        to check bus times, traffic, estimated time of arrival, or when going
+        somewhere new. Google Maps is essential for both travellers and locals.
+      </p>
+      <p>
+        To keep the versatility of Google Maps, we designed it so that our
+        product is a travel mode that can be easily toggled on or off to
+        accommodate the varying needs of users. This saves the users the hassle
+        of downloading and uninstalling an app before and after their trip. All
+        users surveyed said that they really like the features offered by Google
+        Maps and are generally happy with it even though it’s not perfect.
+        Having Travel Mode integrated with Google Maps in its settings means
+        that it builds upon its strengths while filling in the gaps that appear
+        during travels.
+      </p>
+      <img src="Assets/travel-mode.png" width="100%" />
+      <p class="caption">
+        Left: Google Maps’ menu with a section for Travel Mode. Right:
+        Customizable travel mode settings.
+      </p>
+      <br />
+      <h2>Takeaways so far</h2>
+      <ul>
+        <li>
+          Being able to conduct user interviews vs. just conducting surveys is
+          incredibly valuable and insightful. A lot of the insights that I
+          learned were through interviews where I was able to ask the user to
+          elaborate more on an interesting point and dig deeper.
+        </li>
+        <li>
+          When analyzing user research results, taking a step back and looking
+          at the bigger picture is helpful. I found myself getting caught up
+          over each and every individual user’s struggles that it took me a
+          while to realize that even though each struggle is different, there
+          was a common root.
+        </li>
+        <li>
+          Market research helps identify gaps and pain points. Understanding
+          what is already out there and digging into why users’ still have the
+          pain points that they do points us to the direction of a cause. This
+          provides another perspective, helping me understand the pain points
+          better.
+        </li>
+        <li>
+          Working in ambiguity isn’t as scary as it seems! Discovering more
+          about the problem and learning about users’ experiences is really
+          interesting and exploring the problem space is rather delightful. It’s
+          all a part of problem solving and it’s actually kind of fun.
+        </li>
+      </ul>
+      <br />
+      <h2>Challenges</h2>
+      <p>
+        Keeping all the functionalities that users currently love while adding
+        the additional features without the interface getting too cluttered.
+        There is a lot of information being presented and it’s difficult to
+        display it all in a neat way.
+      </p>
+      <br />
+      <h2>Next Steps</h2>
+      <ul>
+        <li>Finish up the UI</li>
+        <li>
+          Conduct usability testing
+          <ul>
+            <li>A/B testing</li>
+          </ul>
+        </li>
+        <li>Iterate</li>
+        <li>Prototype!</li>
+      </ul>
+
+      <div class="end-container">
+        <div
+          style="font-family: 'proxima-nova', Helvetica, sans-serif; font-size: 18px; font-weight: 500; color: #464646; text-align:center; margin-top:150px"
+        >
+          Say hello at
+          <span class="highlight"
+            ><a href="mailto:joslyn.tsui@gmail.com">joslyn.tsui@gmail.com</a
+            ><span style="color:#AFDFE4">...</span></span
+          >
+        </div>
+
+        <div
+          style="font-family: 'Proxima Nova', Helvetica, sans-serif; font-size: 15px; color: #A1A1A1; text-align: center; margin-top:50px; margin-bottom:50px;"
+        >
+          Made with lots of googling and one coconut.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
