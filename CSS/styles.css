@@ -83,7 +83,7 @@
 
 .highlight.swipe-right:hover::before,
 .highlight-parent:hover .highlight.swipe-right::before {
-  width: 95%;
+  width: 100%;
 }
 
 .bodycopy {
