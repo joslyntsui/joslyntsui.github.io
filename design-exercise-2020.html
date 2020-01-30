@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon-01.png" />
+    <title>
+      Google Design Exercise 2020
+    </title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nfw8lgh.css" />
+  </head>
+
+  <body>
+    <div id="case-container">
+      <div id="nav">
+        <ul>
+          <li><a href="index.html" class="highlight swipe-right"> Work </a></li>
+          <li>
+            <a href="about.html" class="highlight swipe-right"> About </a>
+          </li>
+          <li>
+            <a
+              href="Assets/Resume.pdf"
+              target="_blank"
+              class="highlight swipe-right"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+      <img src="Assets/exercise-hero.png" width="100%" />
+
+      <h2>Discovering the problem</h2>
+      <p>
+        I interviewed 3 first years, 2 mentees, 2 upper years, and 3 mentors
+        (past orientation leaders) to find out more about their experiences and
+        what they look for in a mentor-mentee relationship.
+      </p>
+      <h4>First year insights ("new" students)</h4>
+      <ul>
+        <li>Feeling lost in general</li>
+        <li>Often too shy and don’t know how to reach out</li>
+        <li>Struggle to meet the “right” mentor</li>
+        <li>Various fields for mentorship</li>
+      </ul>
+      <p>
+        “I don’t want to annoy or bother upper years”<br />“I just don’t know
+        what’s going on”
+      </p>
+      <h4>Mentee insights (second year +)</h4>
+      <ul>
+        <li>
+          Met their mentors at community events (ex. mixers, clubs, conferences,
+          hackathons, etc.)
+        </li>
+        <li>Grapevine: being introduced from someone else</li>
+      </ul>
+      <p>“Mentorship is a lot like dating”</p>
+      <h4>Upper year insights ("experienced" students)</h4>
+      <ul>
+        <li>Won’t actively be looking to mentor someone</li>
+        <li>Wouldn’t mind helping/mentoring if reached out to</li>
+        <li>More “passive”</li>
+      </ul>
+      <p>“If someone came up to me and ask for advice, I wouldn’t mind”</p>
+      <h4>Mentor insights (orientation leaders, peer leaders, etc.)</h4>
+      <ul>
+        <li>Actively encourage mentees to connect with them</li>
+        <li>
+          Want to provide the mentees with the best advice possible – if they
+          can’t help them with something, they’ll try to connect them with
+          someone who can (grapevine)
+        </li>
+        <li>Sometimes are too busy to mentor but still want to help</li>
+      </ul>
+      <p>
+        “I might not be able to help them but I usually know someone else who
+        can”
+      </p>
+      <br />
+      <h2>Core Problems</h2>
+      <ol>
+        <li>
+          Meeting the right people <br />
+          This can be further broken down into:
+          <ol>
+            <li>
+              Meeting people who have similar experiences (ex. Program, career,
+              interests, campus living)
+            </li>
+            <li>Meeting all potential mentors</li>
+          </ol>
+        </li>
+        <li>Bridging gaps between mentor and mentees</li>
+      </ol>
+      <p>
+        These problems are intertwined, making them complex to solve
+        individually.
+      </p>
+      <br />
+      <h2>Objectives</h2>
+      <p>
+        Help mentor and mentees <b>discover</b> each other and <b>encourage</b>>
+        experienced students to <b>connect</b> with new students.
+      </p>
+      <p>Goals:</p>
+      <ol>
+        <li>Make it easy for mentors and mentees to learn about each other</li>
+        <li>Lower barriers to contact</li>
+        <li>Involve other experienced students who aren’t active mentors</li>
+      </ol>
+      <br />
+      <h2>User flows</h2>
+      <p>
+        I used user flows to get a clearer picture as to what the experience
+        might look like for both mentees and mentors. It’s a very high-level
+        view just to keep me organized to visualize the interactions between
+        mentors and mentees.
+      </p>
+      <img src="Assets/exercise-flow.png" width="100%" />
+      <p>
+        I then moved to Sketch to further flush out the flows through wireframes
+      </p>
+      <img src="Assets/exercise-flow-wires.png" width="100%" />
+      <br />
+      <h2>Solving the problem</h2>
+      <p>
+        I chose to design for web because people
+        <a
+          href="https://techcrunch.com/2017/08/25/majority-of-u-s-consumers-still-download-zero-apps-per-month-says-comscore/"
+          class="highlight swipe-up"
+          >don't like</a
+        >
+        to download apps. A URL is a lower barrier to entry than downloading an
+        app, encouraging more students to join the platform. It can be accessed
+        from any device with an internet connection. There would also be a
+        mobile app format to improve the experience on mobile, however it can
+        also be accessed via web on mobile.
+      </p>
+      <h4>Profile creation</h4>
+      <p>
+        The purpose of the mentee and mentor profiles is to address goal #1,
+        ease of discoverability. Mentees would input some basic information such
+        as program, career goals, interests, etc. and in what areas they want
+        mentorship in. Mentors would input the same sort of basic information
+        and their experiences and areas of expertise. Mentors and mentees can
+        then browse through and see if there are any potential for meaningful
+        mentorships.
+      </p>
+      <img src="Assets/exercise-profile-creation.png" width="100%" />
+      <p class="caption">
+        Since students are logging in with their student IDs, some fields of the
+        their profile can be pre-populated (ex. name, program, email, etc.) to
+        lessen the workload on the user.
+      </p>
+      <p>
+        The profile creation also serves as a questionnaire that is then used to
+        personalize the dashboard. Some parts of the profile creation won’t be
+        shown publicly and are used to match mentors to mentees and vice versa.
+        For example, if a mentee states that they are more on the shy side, then
+        their dashboard would display mentors who are more on the proactive
+        side. That way, each mentee and mentor’s dashboard will be customized
+        for the most optimal match. Mentees will be able to scroll through all
+        available mentors on the platform and the mentors will be ranked from
+        best match to least (and vice versa).
+      </p>
+      <img src="Assets/exercise-preference.png" width="100%" />
+      <h4>Preferred method of contact</h4>
+      <p>
+        Students have favourite messaging platforms and heavily prefer them as
+        they use them daily. Most conversations that occur outside of those
+        platforms will eventually get moved onto them in the end (findings from
+        a previous survey). To lower the barrier to contact and ensure that the
+        mentor-mentee relationship is sustained long-term (goal #2), the
+        platform itself won’t serve as a messaging app rather it will display
+        the preferred method of contact. If a mentee finds a mentor that they
+        want to reach out to, they will send a mentorship request and if the
+        mentor accepts it, then their contact information will be displayed (and
+        vice versa) for privacy reasons. The mentorship request will also serve
+        as a “notification” for the user to keep an eye out for a message on
+        those platforms.
+      </p>
+      <img src="Assets/exercise-preferred-contact.png" width="100%" />
+      <h4>Mentor's network</h4>
+      <p>
+        As experienced students have been on campus longer, they are likely to
+        have an established network of friends who also have experience. In
+        addition to their profile, mentors will also have a network section
+        where they can list areas where they may not personally be able to help
+        but know people who can. As many experienced students noted, they are
+        more than happy to help if someone reached out to them though they may
+        not actively seek out mentees. This way, the “active” mentors can act as
+        a grapevine and a point of connection between mentees and “passive”
+        mentors to keep other experienced students involved (goal #3).
+      </p>
+      <img src="Assets/exercise-network.png" width="100%" />
+      <h2>Additional features</h2>
+      <h4>Update/edit profile</h4>
+      <p>
+        This platform has the potential to be more than just connecting new
+        students to experienced students; even “experienced” students could
+        still want to receive mentorship in certain areas. As students journey
+        through university, their needs and experiences will change and so their
+        profile should reflect that.
+      </p>
+      <h4>Status</h4>
+      <p>
+        To accommodate students’ ever changing, busy schedules and needs, both
+        mentees and mentors can change their status which will be used to
+        calibrate their dashboard.
+        <br />
+        Mentees: as new students progress through their first year, the urgency
+        of their need for mentorship in different areas will change.
+        <br />
+        Mentors: the status is directly reflective of their availability as
+        certain times of the year will be busier than others.
+      </p>
+      <h2>High fidelity</h2>
+      <img src="Assets/exercise-hi-fi-dashboard.jpg" width="100%" />
+      <br />
+      <img src="Assets/exercise-hi-fi-profile.jpg" width="100%" />
+      <h2>Considerations</h2>
+      <p>
+        Interviewing 10 users is not representative of the entire student
+        demographic but due to time and resource constraints, it will suffice
+        for the purposes of this exercise.
+      </p>
+      <p>
+        An aspect that could be explored further is transitioning from a mentee
+        to a mentor or even looking for mentorship in one area but being a
+        mentor in another.
+      </p>
+      <p>
+        A feature that I considered but didn’t fully flush out is having a forum
+        where mentees can post more specific requests. The platform is currently
+        doing it’s matching on very general criteria, though there may be topics
+        that are a little more specific that mentees may want guidance on (ex.
+        Trying to complete a double degree, taking a gap year, etc). Mentors can
+        then browse through those requests and offer public advice (for any of
+        those that may have a similar question) or reach out to the mentee as
+        per usual. This feature was included in the user flow but greyed out. If
+        I had more time, I would have explored it further.
+      </p>
+      <br />
+      <h2>Reflection</h2>
+      <p>
+        I spent a little too much time in the first diamond (discovering and
+        ideating) and didn’t leave enough time for the second diamond
+        (developing and delivering). I underestimated how much time doing the
+        high-fidelity mockups would take and I should have allocated my time
+        better.
+      </p>
+      <p>
+        However, I think that I was able to gather some valuable insights and
+        ideate on features that could really help mentors and mentees discover
+        and connect, and encourage experienced students to get involved.
+      </p>
+      <p>
+        If I had more time, I would definitely flush out the visual designs a
+        lot more, prototype some interactions, and maybe even explore beyond
+        just connecting new students to experienced students and making the
+        platform a place that could be used by all students to share their
+        experiences and to learn from one another.
+      </p>
+
+      <div class="end-container">
+        <div
+          style="font-family: 'proxima-nova', Helvetica, sans-serif; font-size: 18px; font-weight: 500; color: #464646; text-align:center; margin-top:150px"
+        >
+          Say hello at
+          <span class="highlight"
+            ><a href="mailto:joslyn.tsui@gmail.com">joslyn.tsui@gmail.com</a
+            ><span style="color:#AFDFE4">...</span></span
+          >
+        </div>
+
+        <div
+          style="font-family: 'proxima-nova', Helvetica, sans-serif; font-size: 15px; color: #A1A1A1; text-align: center; margin-top:50px; margin-bottom:50px;"
+        >
+          Made with lots of googling and one coconut.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
