@@ -63,12 +63,12 @@
   bottom: 5px;
   left: 5px;
 
-  background: linear-gradient(to top, #afdfe4 100%, transparent 0%);
+  background: linear-gradient(to top, #fae46f 100%, transparent 0%);
 }
 
 .highlight.swipe-up::before {
   transition: 250ms height;
-  height: 7%;
+  height: 9%;
 }
 
 .highlight.swipe-up:hover::before,
