@@ -295,6 +295,7 @@ h4 {
   font-weight: 500;
   font-size: 20px;
   text-transform: uppercase;
+  margin-bottom: 0;
 
   color: #464646;
 }
@@ -304,8 +305,20 @@ h5 {
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 2em;
 
   color: #6d6d6d;
+}
+
+h6 {
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 0;
+
+  color: #464646;
 }
 
 p {
@@ -337,4 +350,11 @@ li {
   font-size: 16px;
   line-height: 1.7em;
   color: #464646;
+}
+
+.center {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
 }

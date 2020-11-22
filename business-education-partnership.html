@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177865701-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-177865701-1");
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon-01.png" />
+    <title>Business Education Partnership</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nfw8lgh.css" />
+  </head>
+
+  <body>
+    <div id="case-container">
+      <div id="nav">
+        <ul>
+          <li><a href="index.html" class="highlight swipe-right"> Work </a></li>
+          <li>
+            <a href="about.html" class="highlight swipe-right"> About </a>
+          </li>
+          <li>
+            <a
+              href="Assets/joslyn-tsui-resume.pdf"
+              target="_blank"
+              class="highlight swipe-right"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+      <img src="Assets/bep-hero.png" width="100%" />
+      <h1>Business Education Partnership</h1>
+      <p>
+        Role: Product Designer <br />
+        Timeline: 8 months <br />
+        Team: 2 Designers (myself &
+        <a
+          href="https://gracemmaa.github.io/portfolio/index.html"
+          class="highlight swipe-up"
+          target="_blank"
+          >Grace Ma</a
+        >) + a team of Developers <br />
+        <br />
+      </p>
+
+      <h2>Context</h2>
+      <p>
+        Business Education Partnership (BEP) is a non-profit organization that
+        provides students’ with career exploration opportunities. One of their
+        primary initiatives is connecting teachers with industry professionals
+        and bringing them into their classrooms to host workshops and
+        presentations. UW Blueprint partnered with BEP to improve their current
+        process of matching volunteer industry professionals with educators.
+      </p>
+      <br />
+
+      <h2>The Problem</h2>
+      <p>
+        Previously, the web app portal they were using was outdated and the
+        majority of the work was being done manually by BEP’s program
+        coordinator. Educators would submit event opportunities via the portal
+        and BEP would review each one and reach out individually to volunteer
+        speakers. Even the process of adding educators and industry
+        professionals to BEP’s database was done manually.
+      </p>
+      <p>
+        This process is not scalable nor efficient. As BEP continues to grow,
+        more requests for volunteers come in.
+      </p>
+      <br />
+
+      <h2>The Solution</h2>
+      <p>
+        Our team developed a web app where educators can connect with industry
+        professionals who want to support youth career development and industry
+        professionals can volunteer to educate youth about their field of work.
+      </p>
+      <br />
+
+      <h2>Arriving at the Solution</h2>
+      <h4>User Research Findings</h4>
+      <p>
+        We conducted six user interviews (three educators and three volunteers)
+        with BEP’s existing users to learn more about their frustrations with
+        the current portal. From our findings, we created a persona for each
+        type of user.
+      </p>
+      <img src="Assets/bep-persona.png" width="100%" />
+      <p><b>Key findings:</b></p>
+      <ul>
+        <li>
+          Both educators and volunteers prefer to use emails as their primary
+          method of communication and they check their emails frequently
+        </li>
+        <li>
+          While educators often check their emails on mobile while on the go,
+          they generally access the BEP portal on desktop
+        </li>
+        <li>
+          Educators will only access the portal if there is an event coming up.
+          They typically host one-two events once every few months
+        </li>
+        <li>
+          Volunteers don’t go on the BEP portal often as there aren’t many
+          actions for them to take other than keeping their profiles up to date
+        </li>
+      </ul>
+      <p>
+        Given the users’ preference for email communication, we worked them into
+        the user flow so that users don’t miss important information (ie.
+        invitations to events, event changes, etc.) as they are not in the habit
+        of logging onto the BEP portal often. We wanted to ensure that the new
+        portal fit seamlessly into their existing habits and behaviours. We
+        worked closely with the developers to smooth out the transitions between
+        email and the portal by using tokenized links.
+      </p>
+      <img src="Assets/bep-flows.png" width="100%" />
+      <br />
+      <h4>Requirements</h4>
+      <p>
+        From our user research findings and business considerations from BEP, we
+        identified a list of features that are needed to help users accomplish
+        their tasks.
+      </p>
+      <ol>
+        <li>
+          A way for educators and volunteers to sign up for the BEP platform
+        </li>
+        <li>A way for educators to post and share event opportunities</li>
+        <li>
+          A way for volunteers to browse upcoming opportunities and apply to be
+          a facilitator
+        </li>
+        <li>
+          A way for educators to browse volunteers and invite them to events
+        </li>
+        <li>
+          A way for educators and volunteers to keep track of their upcoming and
+          past event(s)
+        </li>
+      </ol>
+      <br />
+
+      <h2>Feature Breakdown & Decisions</h2>
+      <h4>Sign-Up</h4>
+      <p>
+        Before educators or volunteers can access the portal, they need to
+        submit an application to BEP first.
+      </p>
+      <h6>
+        <b
+          >Design Decision:
+          <span class="highlight">Progressive Disclosure</span></b
+        >
+      </h6>
+      <p>
+        BEP has a large database of partner companies and organizations in which
+        volunteer industry professionals are a part of. In their application,
+        volunteers need to state who their employer is. If a volunteer’s
+        employer is not listed, they will need to provide additional details
+        (ie. organization’s sector, contact information, etc.) so that BEP can
+        add them to their database.
+      </p>
+      <video width="100%" autoplay loop muted>
+        <source src="Assets/bep-progressive-disclosure.mp4" type="video/mp4" />
+      </video>
+      <p>
+        Dashed lines link the fields together to reduce cognitive load by
+        grouping related information together.
+      </p>
+
+      <h6>
+        <b
+          >Design Decision:
+          <span class="highlight">Multi-Step Form + Stepper</span></b
+        >
+      </h6>
+      <p>
+        A lot of information is required of the volunteer so the application
+        form is quite long. To make the process less daunting, the form was
+        broken up into sections with a stepper to inform the user where they are
+        in the process and how much is left to complete.
+      </p>
+      <img src="Assets/bep-stepper.png" width="100%" />
+      <br /><br />
+      <h4>Dashboard</h4>
+      <p>
+        Educators and volunteers both have a dashboard displaying their upcoming
+        events. Related actions such as viewing past events, applications, and
+        invitations can be accessed here.
+      </p>
+      <img src="Assets/bep-dashboards.png" width="100%" />
+
+      <h6>
+        <b
+          >Design Decision:
+          <span class="highlight">Actionable Empty States</span></b
+        >
+      </h6>
+      <p>
+        Considering that browsing opportunities is a new feature, a volunteer
+        dashboard’s empty state was an opportunity to introduce the feature and
+        encourage users to engage with the platform. The same goes for
+        introducing the invitation functionality for educators; the empty state
+        informs them on how to fill it with content, by inviting volunteers to
+        their event.
+      </p>
+      <img src="Assets/bep-empty-state.png" width="100%" />
+      <p>
+        The text introduces users to the new features and placing a CTA in the
+        empty screen guides users’ interactions, increasing engagement. The
+        empty state was an opportunity to inform users of all the changes to the
+        portal.
+      </p>
+
+      <h6>
+        <b>Design Decision: <span class="highlight">Informative Cards</span></b>
+      </h6>
+      <p>
+        To help educators accomplish their task of filling volunteer spots for
+        an event, we surface that information for each event on the preview
+        card. We show for each event how many spots have already been filled,
+        how many applications were received, and how many invitations were sent.
+        The user can get all this information right from their dashboard without
+        clicking into the event details.
+      </p>
+      <img src="Assets/bep-card.png" width="100%" />
+
+      <h5>Past Iterations</h5>
+      <img src="Assets/bep-dashboard-iterations.png" width="100%" />
+      <p class="caption">Left: Educator dashboard. Right: Event details.</p>
+      <p>
+        Early educator dashboard explorations placed applications and
+        invitations on the main page. However, in the case of where educators
+        are two or more upcoming events, it will be difficult to distinguish
+        clearly which event volunteers applied for or were invited to.
+      </p>
+      <p>
+        The event details page placed applicants and invitations beneath the
+        details. All event related information (details, applicants,
+        invitations) are equally important to educators and not one or the other
+        should be hidden beneath the fold. We needed to show their equality in
+        hierarchy.
+      </p>
+      <br />
+      <h4>Browsing</h4>
+      <p>
+        This feature replaces the manual matching of events with volunteers done
+        by BEP. For educators, they are able to browse and invite volunteers to
+        their events. As for volunteers, they can browse upcoming events and
+        reach out to the educators directly to let them know that they’re
+        interested in participating.
+      </p>
+      <img src="Assets/bep-browse.png" width="100%" />
+      <h6>
+        <b>Design Decision: <span class="highlight">Filter</span></b>
+      </h6>
+      <p>
+        To help educators find relevant industry professionals and to help
+        volunteers find events of interest, filters are there to guide their
+        search. All possible filter parameters are displayed upfront, informing
+        the user right away how they can structure their view. Selected filter
+        chips are displayed to remind the user that their view has been altered.
+      </p>
+      <img src="Assets/bep-filter.png" width="100%" />
+
+      <h5>Past Iteration</h5>
+      <p>
+        In earlier explorations, filter options open up in a modal. This allowed
+        for more of the screen real estate to be dedicated to showing the user
+        items. However, users may not be aware of all the possible filter
+        parameters or forget that they have filters selected and be frustrated
+        by why their view is altered.
+      </p>
+      <img src="Assets/bep-filter-iteration.png" width="100%" />
+      <p>
+        The card layout was also revised for a few reasons. The photo was
+        removed as most volunteers indicated that they wouldn’t upload a photo.
+        Removing the photo also created consistency between volunteer cards and
+        event cards.
+      </p>
+      <p>
+        We also learned from the users what information should be displayed on
+        the card that would be the most useful to them. Knowing how much
+        information needed to be presented, a two column layout would decrease
+        readability so we opted for a single column layout for scannability.
+      </p>
+
+      <h6>
+        <b>Design Decision: <span class="highlight">Infinite Scroll</span></b>
+      </h6>
+      <p>
+        Between infinite scroll and pagination, we opted for infinite scroll to
+        increase user engagement. Since BEP is no longer doing the work of
+        finding speakers for an event, we wanted to encourage educators and
+        volunteers to find new connections and opportunities themselves. With
+        new events being created and more volunteers joining BEP, infinite
+        scroll facilitates a smoother browsing and discovering behaviour.
+      </p>
+      <img src="Assets/bep-infinite-scroll.png" width="100%" />
+      <br /><br /><br />
+
+      <h2>Takeaways</h2>
+      <h6 class="highlight" style="margin-top: 1em">
+        Development Considerations
+      </h6>
+      <p>
+        Getting to work so closely with a team of developers and working to
+        actually build the portal pushed me to really think about all the little
+        details such as various states, interactions, and edge cases. Not only
+        did those details need to be considered, I also had to communicate them
+        to the developers. Design systems and prototypes were a huge asset in
+        that.
+      </p>
+      <h6 class="highlight" style="margin-top: 1em">
+        Be flexible and adaptable
+      </h6>
+      <p>
+        Another thing that I learned is that things don’t always go according to
+        the plan. Working with clients means meeting their expectations and
+        sometimes their needs change. We actually had to re-scope the project a
+        few months in. And that’s okay, we had to start over on some parts but
+        were able to repurpose others. That’s what MVP planning is for; if we
+        get to do more than expected then great, but if not, that’s just the
+        reality of things.
+      </p>
+      <h6 class="highlight" style="margin-top: 1em">User Research</h6>
+      <p>
+        The last takeaway from this project is that nothing beats talking to the
+        users. The NPO was our main point of contact and provided all the
+        answers to our questions (in a pinch) but getting access to real users
+        is invaluable.
+      </p>
+      <br />
+
+      <h2>Next Steps</h2>
+      <p>
+        Although this project has shipped and been handed off to the NPO, there
+        were a few things that I would have like to have done with more time and
+        resources:
+      </p>
+      <ol>
+        <li>
+          Add more fun and moments of delight to the UI. We focused on a simple
+          and clean UI based on our user demographic but it wouldn’t hurt to add
+          a little more visual interest into it.
+        </li>
+        <li>
+          Finesse the copy. Copy writing tends to be overlooked but it’s the
+          little detail that can really make a difference in UX.
+        </li>
+        <li>
+          Usability testing and design validation. Find out if our designs align
+          with users’ current behaviour and habits; if it helps them accomplish
+          their tasks.
+        </li>
+      </ol>
+
+      <div class="end-container">
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #464646;
+            text-align: center;
+            margin-top: 150px;
+          "
+        >
+          Say hello at
+          <span class="highlight"
+            ><a href="mailto:joslyn.tsui@gmail.com">joslyn.tsui@gmail.com</a
+            ><span style="color: #afdfe4">...</span></span
+          >
+        </div>
+
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 15px;
+            color: #a1a1a1;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+          "
+        >
+          Made with lots of googling and one coconut.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
