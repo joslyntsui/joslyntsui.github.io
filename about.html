@@ -22,6 +22,7 @@
     <title>About</title>
     <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/nfw8lgh.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
@@ -48,63 +49,75 @@
         style="margin-right: 20px; float: left; clear: right"
       />
       -->
-      <img
-        src="Assets/me.jpg"
-        width="100%"
-        /> <br><br>
-      <span id="header"> Joslyn 崔 : </span>
-      <span id="definition"> [joss‧lin ts‧way]</span>
-      <br />
-      <p>
-        I’m a senior at the University of Waterloo studying Global Business and
-        Digital Arts. I’m a curious problem solver who loves collaboration and
-        empowering others.
-      </p>
-      <p>
-        Outside of school, I design for social good with
-        <a
-          href="https://uwblueprint.org/"
-          class="highlight swipe-up"
-          target="_blank"
-          >UW Blueprint.</a
-        >
-        I also freelance occasionally for friends and family (they put the
-        ‘free’ in freelance).
-      </p>
-      <p>
-        When I’m not designing, I can be found
-        <a
-          href="https://www.youtube.com/watch?v=fmM9JVf0aIY"
-          class="highlight swipe-up"
-          target="_blank"
-          >dancing</a
-        >, exploring (ask me about my term abroad!), destroying my friendships
-        via boardgames, and [barely] keeping my plants alive.
-      </p>
-      <p>
-        Questions? Drop a
-        <a href="mailto:joslyn.tsui@gmail.com" class="highlight swipe-up">
-          note</a
-        >
-        or
-        <a
-          href="https://www.linkedin.com/in/joslyn-tsui/"
-          class="highlight swipe-up"
-          target="_blank"
-        >
-          connect</a
-        >
-        with me.
+      <div
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="500"
+        data-aos-delay="100"
+      >
+        <img src="Assets/me.jpg" width="100%" />
+      </div>
+      <br /><br />
+      <div
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="15000"
+        data-aos-delay="500"
+      >
+        <span id="header"> Joslyn 崔 : </span>
+        <span id="definition"> [joss‧lin ts‧way]</span>
         <br />
-        TLDR? My
-        <a
-          href="Assets/joslyn-tsui-resume.pdf"
-          class="highlight swipe-up"
-          target="_blank"
-          >resume</a
-        >
-        might help.
-      </p>
+        <p>
+          I’m a senior at the University of Waterloo studying Global Business
+          and Digital Arts. I’m a curious problem solver who loves collaboration
+          and empowering others.
+        </p>
+        <p>
+          Outside of school, I design for social good with
+          <a
+            href="https://uwblueprint.org/"
+            class="highlight swipe-up"
+            target="_blank"
+            >UW Blueprint.</a
+          >
+          I also freelance occasionally for friends and family (they put the
+          ‘free’ in freelance).
+        </p>
+        <p>
+          When I’m not designing, I can be found
+          <a
+            href="https://www.youtube.com/watch?v=fmM9JVf0aIY"
+            class="highlight swipe-up"
+            target="_blank"
+            >dancing</a
+          >, exploring (ask me about my term abroad!), destroying my friendships
+          via boardgames, and [barely] keeping my plants alive.
+        </p>
+        <p>
+          Questions? Drop a
+          <a href="mailto:joslyn.tsui@gmail.com" class="highlight swipe-up">
+            note</a
+          >
+          or
+          <a
+            href="https://www.linkedin.com/in/joslyn-tsui/"
+            class="highlight swipe-up"
+            target="_blank"
+          >
+            connect</a
+          >
+          with me.
+          <br />
+          TLDR? My
+          <a
+            href="Assets/joslyn-tsui-resume.pdf"
+            class="highlight swipe-up"
+            target="_blank"
+            >resume</a
+          >
+          might help.
+        </p>
+      </div>
       <div class="end-container">
         <div
           style="
@@ -120,5 +133,9 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

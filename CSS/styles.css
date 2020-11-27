@@ -148,7 +148,8 @@ a:visited {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: fit-content(100%);
-  grid-gap: 2em;
+  grid-column-gap: 2em;
+  grid-row-gap: 3.2em;
 }
 
 @media screen and (max-width: 1080px) {
