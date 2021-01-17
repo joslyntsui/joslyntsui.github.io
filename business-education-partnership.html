@@ -74,13 +74,18 @@
 
         <h2>Context</h2>
         <p>
-          Business Education Partnership (BEP) is a non-profit organization that
-          provides students’ with career exploration opportunities. One of their
-          primary initiatives is connecting teachers with industry professionals
-          and bringing them into their classrooms to host workshops and
-          presentations. UW Blueprint partnered with BEP to improve their
-          current process of matching volunteer industry professionals with
-          educators.
+          <a
+            href="https://www.bepwr.ca/"
+            class="highlight swipe-up"
+            target="_blank"
+            >Business Education Partnership</a
+          >
+          (BEP) is a non-profit organization that provides students’ with career
+          exploration opportunities. One of their primary initiatives is
+          connecting teachers with industry professionals and bringing them into
+          their classrooms to host workshops and presentations. UW Blueprint
+          partnered with BEP to improve their current process of matching
+          volunteer industry professionals with educators.
         </p>
         <br />
 
@@ -103,8 +108,8 @@
         <p>
           Our team developed a web app where educators can connect with industry
           professionals who want to support youth career development and
-          industry professionals can volunteer to educate youth about their
-          field of work.
+          industry professionals can find opportunities to educate youth about
+          their field of work.
         </p>
         <br />
 
@@ -129,7 +134,7 @@
           </li>
           <li>
             Educators will only access the portal if there is an event coming
-            up. They typically host one-two events once every few months
+            up. They typically host 1-2 events once every few months
           </li>
           <li>
             Volunteers don’t go on the BEP portal often as there aren’t many
@@ -147,6 +152,7 @@
           transitions between email and the portal by using tokenized links.
         </p>
         <img src="Assets/bep-flows.png" width="100%" />
+        <p class="caption">Left: Educator flow. Right: Volunteer flow.</p>
         <br />
         <h4>Requirements</h4>
         <p>
@@ -176,7 +182,7 @@
         <h2>Feature Breakdown & Decisions</h2>
         <h4>Sign-Up</h4>
         <p>
-          Before educators or volunteers can access the portal, they need to
+          Before new educators or volunteers can access the portal, they need to
           submit an application to BEP first.
         </p>
         <h6>
@@ -193,6 +199,15 @@
           additional details (ie. organization’s sector, contact information,
           etc.) so that BEP can add them to their database.
         </p>
+        <p>
+          To not overwhelm the user with too many actions, the additional fields
+          are not displayed unless the user indicates that their employer was
+          not listed. The actions to add a new organization is not revealed
+          unless requested. Furthermore, to save the user from having to scroll
+          through the list to find their employer, they are able to type their
+          employer name. Only then if no employers by that name exists in the
+          database does the option to add a new employer appear.
+        </p>
         <video width="100%" autoplay loop muted>
           <source
             src="Assets/bep-progressive-disclosure.mp4"
@@ -203,6 +218,42 @@
           Dashed lines link the fields together to reduce cognitive load by
           grouping related information together.
         </p>
+        <h5>Past Iterations</h5>
+        <p>
+          In the first iteration of the sign-up form for volunteers, users whose
+          employers weren’t in the database would submit their employer’s
+          information in a modal. The problem is that once the user has finished
+          filling out the fields in the modal and saved their answers, it isn’t
+          displayed on the main form, making it unclear to the user whether or
+          not their answers were saved and submitted. This also makes it tricky
+          for the user to edit their answers and review the overall form before
+          submission.
+        </p>
+        <img src="Assets/bep-new-employer-iteration.png" width="100%" />
+        <br />
+        <br />
+        <p>
+          Additionally, when users of a new employer first search for their
+          employer from the dropdown (and no result is found), seeing “employer
+          not found” denotes negative feelings and may discourage them from
+          adding it since the field is optional or confuse users on how to
+          proceed with the lack of guidance and actionable items.
+        </p>
+        <img src="Assets/bep-employer-not-found.png" width="100%" />
+        <br />
+        <p>
+          The users feel as though they’ve hit a dead end whereas with
+          progressive disclosure, the process flows smoothly into adding a new
+          employer’s information as there are clear actions forward.
+          Furthermore, no fields are hidden away in a modal, keeping the user
+          aware and informed on all their answers.
+        </p>
+        <img src="Assets/bep-progressive-disclosure.png" width="100%" />
+        <p class="caption">
+          Left: Progress disclosure trigger. Right: New fields, progressively
+          disclosed.
+        </p>
+        <br />
 
         <h6>
           <b
@@ -226,7 +277,9 @@
           related actions such as applications and invitations.
         </p>
         <img src="Assets/bep-dashboards.png" width="100%" />
-        <p class="caption">Left: Dashboard. Right: Event Details.</p>
+        <p class="caption">
+          Left: Educator dashboard. Right: Event details, event applicants.
+        </p>
         <h5>Past Iterations</h5>
         <p>
           Early educator dashboard explorations placed applications and
@@ -235,18 +288,20 @@
           clearly which event volunteers applied for or were invited to.
         </p>
         <img src="Assets/bep-dashboard-iterations.png" width="100%" />
-        <br /><br />
+        <p class="caption">Iteration 1</p>
+        <br />
         <p>
           In the next iteration, we decided to move the applications and
           invitations sections to the event details page to clearly distinguish
-          participants for each event, placing them beneath the details.
+          the participants for each event, placing them beneath the details.
           However, all event related information (details, applications,
           invitations) are equally important to educators and not one or the
           other should be hidden beneath the fold. There’s also a chance that
           educators will miss incoming applications if they don’t scroll down.
         </p>
         <img src="Assets/bep-event-iterations.png" width="100%" />
-        <br /><br />
+        <p class="caption">Iteration 2</p>
+        <br />
         <p>
           The final design displays all information at a glance. We moved
           applications and invitations into their own separate tabs with the
@@ -256,6 +311,7 @@
           of them missing out on important information.
         </p>
         <img src="Assets/bep-tabs.png" width="100%" />
+        <p class="caption">Final designs</p>
         <br />
 
         <h6>
@@ -301,13 +357,14 @@
         <img src="Assets/bep-card.png" width="100%" />
 
         <br />
+        <br />
         <h4>Browsing</h4>
         <p>
           This feature replaces the manual matching of events with volunteers
-          done by BEP. For educators, they are able to browse and invite
-          volunteers to their events. As for volunteers, they can browse
-          upcoming events and reach out to the educators directly to let them
-          know that they’re interested in participating.
+          traditionally done by BEP. For educators, they are able to browse and
+          invite volunteers to their events. As for volunteers, they can browse
+          upcoming events and let educators know that they’re interested in
+          participating.
         </p>
         <img src="Assets/bep-browse.png" width="100%" />
         <p class="caption">
@@ -331,15 +388,16 @@
         <p>
           In earlier explorations, filter options open up in a modal. This
           allowed for more of the screen real estate to be dedicated to showing
-          the user items. However, users may not be aware of all the possible
+          the user content. However, users may not be aware of all the possible
           filter parameters or forget that they have filters selected and be
           frustrated by why their view is altered.
         </p>
         <img src="Assets/bep-filter-iteration.png" width="100%" />
+        <p class="caption">Early explorations</p>
         <p>
           The card layout was also revised for a few reasons. The photo was
           removed as most volunteers indicated that they wouldn’t upload a
-          photo. Removing the photo also created consistency between volunteer
+          photo. Removing the photo also creates consistency between volunteer
           cards and event cards.
         </p>
         <p>
@@ -348,6 +406,8 @@
           information needed to be presented, a two column layout would decrease
           readability so we opted for a single column layout for scannability.
         </p>
+        <img src="Assets/bep-filter-final.png" width="100%" />
+        <p class="caption">Final browse & filter design.</p>
 
         <h6>
           <b>Design Decision: <span class="highlight">Infinite Scroll</span></b>
@@ -362,6 +422,25 @@
         </p>
         <img src="Assets/bep-infinite-scroll.png" width="100%" />
         <br /><br /><br />
+        <h6>
+          <b
+            >Design Decision:
+            <span class="highlight">Disappearing Header</span></b
+          >
+        </h6>
+        <p>
+          To create more space for browsing, the header is hidden once the user
+          starts scrolling down. This allows for one more full volunteer card to
+          be shown, increasing the amount of content being shown on screen to
+          fully immerse the user. The header comes back once the user starts
+          scrolling back up or if they move their cursor to the navigation bar
+          so that search and filter is still easily accessible as they help the
+          user focus their browsing experience.
+        </p>
+        <video width="100%" autoplay loop muted>
+          <source src="Assets/bep-disappearing-header.mp4" type="video/mp4" />
+        </video>
+        <br /><br />
 
         <h2>Takeaways</h2>
         <h6 class="highlight" style="margin-top: 1em">
@@ -376,16 +455,16 @@
           a huge asset in that.
         </p>
         <h6 class="highlight" style="margin-top: 1em">
-          Be flexible and adaptable
+          Work closely with Product Managers (PMs) and Clients.
         </h6>
         <p>
-          Another thing that I learned is that things don’t always go according
-          to the plan. Working with clients means meeting their expectations and
-          sometimes their needs change. We actually had to re-scope the project
-          a few months in. And that’s okay, we had to start over on some parts
-          but were able to repurpose others. That’s what MVP planning is for; if
-          we get to do more than expected then great, but if not, that’s just
-          the reality of things.
+          Another thing that I learned is that scoping a project isn’t a job
+          just for PMs; designers should participate as well. Better and more
+          frequent communication with PMs and clients could have caught a lot of
+          oversight and resulted in less wasted work. The project was re-scoped
+          a few months in and had designers been a part of the conversation
+          right from the get go, expectations would have been better managed and
+          a lot of time could have been saved.
         </p>
         <h6 class="highlight" style="margin-top: 1em">User Research</h6>
         <p>
