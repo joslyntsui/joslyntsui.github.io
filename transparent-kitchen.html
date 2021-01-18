@@ -70,8 +70,12 @@
           I interned at a small-scale start-up in the food and beverage industry
           at the beginning of the COVID-19 pandemic. Restaurants everywhere were
           being affected by the lockdown so Transparent Kitchen (TK) teamed up
-          with App8 to quickly pivot their business model to focus on getting
-          local restaurants back on their feet.
+          with
+          <a href="https://app8solutions.com/" class="highlight swipe-up"
+            >App8</a
+          >
+          to quickly pivot their business model to focus on getting local
+          restaurants back on their feet.
         </p>
         <p>
           We had to move quickly to get a product out to market before too many
@@ -81,25 +85,32 @@
           launching the MVP, we were able to help restaurants open up again
           sooner rather than later.
         </p>
+        <p class="callout">
+          Building tools and solutions for the food and beverage industry.
+        </p>
         <br />
 
         <h2>The Problem</h2>
         <p>
-          Once dining-in was allowed again, restaurants weren’t able to operate
-          at full capacity due to social distancing regulations and decrease of
-          staff. Both restaurant workers and customers felt anxiety about being
-          in contact with other people outside of their bubbles. However,
+          Once dine-in was allowed again, restaurants weren’t able to operate at
+          full capacity due to social distancing regulations, layoffs, and
+          budget cuts. Both restaurant workers and customers felt anxiety about
+          being in contact with other people outside of their bubbles. However,
           customers want to dine out again and restaurants want to get back to
           business. Both parties highly value the experience of eating in a
           restaurant.
         </p>
+        <p class="callout">
+          How might Transparent Kitchen & App8 help restaurants safely offer
+          dine-in services in a pandemic with reduced staff?
+        </p>
         <br />
 
         <h2>The Solution</h2>
-        <p>
-          To protect customers and restaurant staff, we designed a contactless
-          dine-in experience along with an end-to-end Point of Sales system
-          (PoS) with customizable UI.
+        <p class="callout">
+          To protect customers and restaurant staff, we designed a white-label,
+          contactless dine-in experience along with an end-to-end Point of Sales
+          system (PoS).
         </p>
         <p>
           The user scans a QR code on their table to view the menu. From the
@@ -110,17 +121,23 @@
         <img src="Assets/tk-solution.png" width="100%" /> <br /><br />
 
         <p>
-          Restaurants are able to keep their sense of identity in their digital
-          menus by incorporating their brand styling. By customizing the
-          appearance of the ordering experience, each restaurant can preserve
-          their individuality even if their neighbour is also using the same
-          technology.
+          By
+          <a
+            href="https://www.thatcompany.com/white-label-marketing/white-label-software#:~:text=White%20Label%20Software%20is%20software,a%20Service%20(SaaS)%20model.&text=The%20reseller%20adds%20their%20branding,as%20if%20they%20developed%20it."
+            class="highlight swipe-up"
+            >white-labelling</a
+          >
+          the product, restaurants are able to keep their sense of identity in
+          their digital menus. By customizing the appearance of the interface,
+          each restaurant can preserve their individuality even if their
+          neighbour is also using the same technology.
         </p>
         <img src="Assets/tk-customization.png" width="100%" />
-        <p class="caption">Examples of custom menus</p>
+        <p class="caption">Custom menu samples.</p>
+        <br />
 
-        <h2>Feature Breakdown & Decisions</h2>
-        <h4>Menu Discovery</h4>
+        <h3>Feature Breakdown & Decisions</h3>
+        <h2>Menu Discovery</h2>
         <p>
           Wanting to offer customers their full menus, restaurants didn’t want
           to condense their menus into one. They wanted to keep all their
@@ -129,12 +146,12 @@
           find their usual order while still encouraging them and new customers
           to explore and discover different dishes.
         </p>
-        <h6>
+        <h4>
           <b
             >Design Decision:
             <span class="highlight">Dropdown & Scrollable Tabs</span></b
           >
-        </h6>
+        </h4>
         <p>
           Since users scan the QR code at the restaurant, the correct menu is
           presented to them based on the time of the scan. If the user is
@@ -180,9 +197,9 @@
           other menus and how to access them.
         </p>
 
-        <h6>
+        <h4>
           <b>Design Decision: <span class="highlight">Filter</span></b>
-        </h6>
+        </h4>
         <p>
           Competitive analysis shows that no other menus (ie. UberEats,
           DoorDash, etc.) have the ability to filter menu items. Considering
@@ -223,13 +240,13 @@
         </p>
         <br />
 
-        <h4>View Cart & Place Order</h4>
-        <h6 style="margin-top: 1.2em">
+        <h2>View Cart & Place Order</h2>
+        <h4 style="margin-top: 1.2em">
           <b
             >Design Decision:
             <span class="highlight">A Non-Disruptive Cart</span></b
           >
-        </h6>
+        </h4>
         <p>
           While a cart is a pretty standard pattern, we wanted to design it in
           such a way that it doesn’t interrupt the user’s browsing flow as the
@@ -243,6 +260,7 @@
             <source src="Assets/tk-cart-drawer.mp4" type="video/mp4" />
           </video>
         </div>
+        <br />
         <h5>Past Iteration</h5>
         <p>
           Previously, the car existed on a separate page, following a common
@@ -254,15 +272,16 @@
           to click through to placing the order.
         </p>
         <img src="Assets/tk-cart-iteration.png" width="100%" />
+        <p class="caption">Iteration 1</p>
         <p>
           Iterating upon that, the final design of the bottom drawer not only
           enables users to make decisions quickly and easily, but it also
           encourages users to continue browsing and adding more items.
         </p>
         <img src="Assets/tk-cart-still.png" width="100%" />
-        <br />
+        <br /><br />
 
-        <h4>Checkout Flows</h4>
+        <h2>Checkout Flows</h2>
         <p>
           There are two ways for users to pay for their meals: at the end of
           their meal (an open tab) or with every order placed (close tab).
@@ -294,13 +313,14 @@
         </p>
         <img src="Assets/tk-no-tab-flow.png" width="100%" />
         <p class="caption">Guest user, no tab flow</p>
+        <br />
 
-        <h6>
+        <h4>
           <b
             >Design Decision:
             <span class="highlight">Interstitial Screens</span></b
           >
-        </h6>
+        </h4>
         <p>
           To introduce and convince users to create an account, we used
           interstitial screens to prompt users. We A/B tested a dialog
@@ -329,12 +349,14 @@
             >
           </li>
         </ol>
+        <br />
 
-        <h6>
+        <h4>
           <b
             >Decision: <span class="highlight">Order History & Updates</span></b
           >
-        </h6>
+          <br />
+        </h4>
         <p>
           With an ongoing tab, users can see what they’ve ordered so far and
           place new orders. By keeping users informed on the status of their
@@ -361,8 +383,9 @@
           allowed more flexibility in case there was something wrong with their
           order or if they wanted to make changes after the order was sent.
         </p>
+        <br />
         <!---
-        <h4>Security: Card Storing</h4>
+        <h2>Security: Card Storing</h2>
         <p>
           Many users expressed concerns and uneasiness around providing their
           card information. While they understand why it’s being asked, they
@@ -405,42 +428,48 @@
         </p>
         <br /> -->
 
-        <h5>Menu Customizations</h5>
+        <h2>Menu Customizations</h2>
         <p>
           To deliver the contactless dine-in experience, there is a B2B side of
-          the product. While TK builds the technology, each individual
-          restaurant can skin the UI to match their brand.
+          the product. Since this is a white-label product, TK builds the
+          technology but each individual restaurant can skin the UI to match
+          their brand.
         </p>
         <img src="Assets/tk-restaurant-menus.png" width="100%" />
-        <p class="caption">Digital menus based off of real restaurant menus.</p>
+        <p class="caption">
+          Sample digital menus based off of real restaurant (physical) menus.
+        </p>
         <br />
         <p>
           To build an unique menu, there are a variety of different elements
           that can be customized by restaurant owners. To find the best way to
           organize all the different settings, we conducted a card sorting
-          activity. Here are the results:
+          activity with all customizable elements. Here are the results:
         </p>
         <img src="Assets/tk-cart-sort.png" width="100%" /> <br />
         <br />
         <p>
-          Afterwards, we researched menus and thought about all the customizable
+          Afterwards, we researched menus and thought about all the individual
           properties (ie. fonts, colour, stroke, etc.) that would be necessary
-          for each element to recreate each menu in a digital space.
+          for each element to recreate each physical menu in a digital space.
         </p>
         <img src="Assets/tk-properties.png" width="100%" />
         <br />
         <br />
+        <h3>Conclusion</h3>
         <h2>Results</h2>
+        <p class="callout">
+          MVP launch! 🚀 Selected restaurants are currently using TK’s ordering
+          system to safely serve customers during the pandemic.
+        </p>
         <p>
-          MVP launch! I was incredibly proud to have been a part of the process
-          of launching TK’s product to market. Selected restaurants are
-          currently using TK’s ordering system to safely serve customers during
-          the pandemic.
+          I'm incredibly proud to have been a part of the process of launching
+          TK’s product to market.
         </p>
         <br />
 
         <h2>Takeaways</h2>
-        <h6 class="highlight" style="margin-top: 1em">Design Ops</h6>
+        <h4>Design Ops</h4>
         <p>
           Being one of the first TK design hires and on such a small team, I got
           to dip my toes in things other than just design. Since TK has never
@@ -456,9 +485,7 @@
           I’m glad that even though my entire internship was fully remote, I was
           able to make such a large and meaningful impact.
         </p>
-        <h6 class="highlight" style="margin-top: 1em">
-          Usability & User Testing
-        </h6>
+        <h4>Usability & User Testing</h4>
         <p>
           As for design takeaways, I gained experience in structuring and
           conducting usability tests. I learned about best practices for running
@@ -468,14 +495,14 @@
           different types of tests with two different goals that give two
           different results.
         </p>
-        <h6 class="highlight" style="margin-top: 1em">Prototyping</h6>
+        <h4>Prototyping</h4>
         <p>
           If a picture is worth 1000 words then a prototype is worth a million.
           Communicating designs for development can be difficult and confusing
           when only words are being used. A quick and simple prototype will get
           the point across much faster and clearer.
         </p>
-        <h6 class="highlight" style="margin-top: 1em">Scalability</h6>
+        <h4>Scalability</h4>
         <p>
           The last design takeaway is learning how to build for the future and
           thinking ahead. Even though we were building an initial MVP, we still

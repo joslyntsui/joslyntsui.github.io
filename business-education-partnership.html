@@ -61,14 +61,14 @@
         <h1>Business Education Partnership</h1>
         <p>
           Role: Product Designer <br />
-          Timeline: 8 months <br />
+          Timeline: 6 months <br />
           Team: 2 Designers (myself &
           <a
             href="https://gracemmaa.github.io/portfolio/index.html"
             class="highlight swipe-up"
             target="_blank"
             >Grace Ma</a
-          >) + a team of Developers <br />
+          >), a team of 8 Developers, and 1 Product Manager <br />
           <br />
         </p>
 
@@ -83,9 +83,11 @@
           (BEP) is a non-profit organization that provides students’ with career
           exploration opportunities. One of their primary initiatives is
           connecting teachers with industry professionals and bringing them into
-          their classrooms to host workshops and presentations. UW Blueprint
-          partnered with BEP to improve their current process of matching
-          volunteer industry professionals with educators.
+          their classrooms to host workshops and presentations.
+        </p>
+        <p class="callout">
+          UW Blueprint partnered with BEP to improve their current process of
+          matching volunteer industry professionals with educators.
         </p>
         <br />
 
@@ -102,10 +104,14 @@
           This process is not scalable nor efficient. As BEP continues to grow,
           more requests for volunteers come in.
         </p>
+        <p class="callout">
+          How might UW Blueprint relieve the manual labour being done by BEP
+          personnel and engage users to create connections themselves?
+        </p>
         <br />
 
         <h2>The Solution</h2>
-        <p>
+        <p class="callout">
           Our team developed a web app where educators can connect with industry
           professionals who want to support youth career development and
           industry professionals can find opportunities to educate youth about
@@ -113,8 +119,8 @@
         </p>
         <br />
 
-        <h2>Arriving at the Solution</h2>
-        <h4>User Research Findings</h4>
+        <h3>Arriving at the Solution</h3>
+        <h2>User Research Findings</h2>
         <p>
           We conducted six user interviews (three educators and three
           volunteers) with BEP’s existing users to learn more about their
@@ -154,7 +160,7 @@
         <img src="Assets/bep-flows.png" width="100%" />
         <p class="caption">Left: Educator flow. Right: Volunteer flow.</p>
         <br />
-        <h4>Requirements</h4>
+        <h2>Requirements</h2>
         <p>
           From our user research findings and business considerations from BEP,
           we identified a list of features that are needed to help users
@@ -179,24 +185,22 @@
         </ol>
         <br />
 
-        <h2>Feature Breakdown & Decisions</h2>
-        <h4>Sign-Up</h4>
+        <h3>Feature Breakdown & Decisions</h3>
+        <h2>Sign-Up</h2>
         <p>
           Before new educators or volunteers can access the portal, they need to
           submit an application to BEP first.
         </p>
-        <h6>
-          <b
-            >Design Decision:
-            <span class="highlight">Progressive Disclosure</span></b
-          >
-        </h6>
+        <h4>
+          Design Decision:
+          <span class="highlight">Progressive Disclosure</span>
+        </h4>
         <p>
           BEP has a large database of partner companies and organizations in
           which volunteer industry professionals are a part of. In their
           application, volunteers need to state who their employer is. If a
-          volunteer’s employer is not listed, they will need to provide
-          additional details (ie. organization’s sector, contact information,
+          volunteer's employer is not listed, they will need to provide
+          additional details (ie. organization's sector, contact information,
           etc.) so that BEP can add them to their database.
         </p>
         <p>
@@ -227,7 +231,7 @@
           submission.
         </p>
         <img src="Assets/bep-new-employer-iteration.png" width="100%" />
-        <br />
+        <p class="caption">Iteration 1</p>
         <br />
         <p>
           Additionally, when users of a new employer first search for their
@@ -237,6 +241,7 @@
           proceed with the lack of guidance and actionable items.
         </p>
         <img src="Assets/bep-employer-not-found.png" width="100%" />
+        <p class="caption">"Employer not found"</p>
         <br />
         <p>
           The users feel as though they’ve hit a dead end whereas with
@@ -252,12 +257,10 @@
         </p>
         <br />
 
-        <h6>
-          <b
-            >Design Decision:
-            <span class="highlight">Multi-Step Form + Stepper</span></b
-          >
-        </h6>
+        <h4>
+          Design Decision:
+          <span class="highlight">Multi-Step Form + Stepper</span>
+        </h4>
         <p>
           A lot of information is required of the volunteer so the application
           form is quite long. To make the process less daunting, the form was
@@ -265,8 +268,8 @@
           are in the process and how much is left to complete.
         </p>
         <img src="Assets/bep-stepper.png" width="100%" />
-        <br /><br />
-        <h4>Dashboard & Event Details</h4>
+        <br /><br /><br />
+        <h2>Dashboard & Event Details</h2>
         <p>
           Educators and volunteers both have a dashboard displaying their
           upcoming events. They can also view past events and access specific
@@ -311,12 +314,10 @@
         <p class="caption">Final designs</p>
         <br />
 
-        <h6>
-          <b
-            >Design Decision:
-            <span class="highlight">Actionable Empty States</span></b
-          >
-        </h6>
+        <h4>
+          Design Decision:
+          <span class="highlight">Actionable Empty States</span>
+        </h4>
         <p>
           Considering that browsing opportunities is a new feature, a volunteer
           dashboard’s empty state was an opportunity to introduce the feature
@@ -336,13 +337,12 @@
           empty state was an opportunity to inform users of all the changes to
           the portal.
         </p>
+        <br />
 
-        <h6>
-          <b
-            >Design Decision:
-            <span class="highlight">Informative Cards</span></b
-          >
-        </h6>
+        <h4>
+          Design Decision:
+          <span class="highlight">Informative Cards</span>
+        </h4>
         <p>
           To help educators accomplish their task of filling volunteer spots for
           an event, we surface that information for each event on the preview
@@ -355,7 +355,8 @@
 
         <br />
         <br />
-        <h4>Browsing</h4>
+        <br />
+        <h2>Browsing</h2>
         <p>
           This feature replaces the manual matching of events with volunteers
           traditionally done by BEP. For educators, they are able to browse and
@@ -368,9 +369,7 @@
           Left: Educator browse volunteers. Right: Volunteer browse
           opportunities.
         </p>
-        <h6>
-          <b>Design Decision: <span class="highlight">Filter</span></b>
-        </h6>
+        <h4>Design Decision: <span class="highlight">Filter</span></h4>
         <p>
           To help educators find relevant industry professionals and to help
           volunteers find events of interest, filters are there to guide their
@@ -405,10 +404,9 @@
         </p>
         <img src="Assets/bep-filter-final.png" width="100%" />
         <p class="caption">Final browse & filter design.</p>
+        <br />
 
-        <h6>
-          <b>Design Decision: <span class="highlight">Infinite Scroll</span></b>
-        </h6>
+        <h4>Design Decision: <span class="highlight">Infinite Scroll</span></h4>
         <p>
           Between infinite scroll and pagination, we opted for infinite scroll
           to increase user engagement. Since BEP is no longer doing the work of
@@ -418,13 +416,11 @@
           scroll facilitates a smoother browsing and discovering behaviour.
         </p>
         <img src="Assets/bep-infinite-scroll.png" width="100%" />
-        <br /><br /><br />
-        <h6>
-          <b
-            >Design Decision:
-            <span class="highlight">Disappearing Header</span></b
-          >
-        </h6>
+        <br /><br />
+        <h4>
+          Design Decision:
+          <span class="highlight">Disappearing Header</span>
+        </h4>
         <p>
           To create more space for browsing, the header is hidden once the user
           starts scrolling down. This allows for one more full volunteer card to
@@ -439,10 +435,9 @@
         </video>
         <br /><br />
 
+        <h3>Conclusion</h3>
         <h2>Takeaways</h2>
-        <h6 class="highlight" style="margin-top: 1em">
-          Development Considerations
-        </h6>
+        <h4>Development Considerations</h4>
         <p>
           Getting to work so closely with a team of developers and working to
           actually build the portal pushed me to really think about all the
@@ -451,9 +446,7 @@
           communicate them to the developers. Design systems and prototypes were
           a huge asset in that.
         </p>
-        <h6 class="highlight" style="margin-top: 1em">
-          Work closely with Product Managers (PMs) and Clients.
-        </h6>
+        <h4>Work closely with Product Managers (PMs) and Clients.</h4>
         <p>
           Another thing that I learned is that scoping a project isn’t a job
           just for PMs; designers should participate as well. Better and more
@@ -463,7 +456,7 @@
           right from the get go, expectations would have been better managed and
           a lot of time could have been saved.
         </p>
-        <h6 class="highlight" style="margin-top: 1em">User Research</h6>
+        <h4>User Research</h4>
         <p>
           The last takeaway from this project is that nothing beats talking to
           the users. The NPO was our main point of contact and provided all the
