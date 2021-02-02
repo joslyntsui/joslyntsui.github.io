@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600");
 
+html {
+  scroll-behavior: smooth;
+}
+
 .outer-body-container {
   width: 100%;
   display: flex;
@@ -8,7 +12,7 @@
 }
 
 .outer-body-container .container {
-  width: 80%;
+  width: 70%;
   max-width: 1000px;
 }
 
@@ -28,8 +32,54 @@
   justify-content: space-between;
 }
 
+#nav {
+  font-family: "Avenir", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: right;
+  color: #464646;
+  margin-bottom: 50px;
+  float: right;
+  padding-top: 40px;
+}
+
+#logo {
+  float: left;
+  font-family: "Avenir", Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #464646;
+}
+
+@media screen and (max-width: 400px) {
+  #logo {
+    display: none;
+  }
+}
+
+#nav-container {
+  width: 70%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 12%;
+  /*
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  background-color: white;
+  */
+}
+
+@media screen and (max-width: 700px) {
+  #nav-container {
+    width: 85%;
+  }
+}
+
 #main {
-  width: 60%;
+  width: 65%;
   margin-top: 75px;
 }
 
@@ -142,7 +192,8 @@ a:visited {
 /* PROJECT SECTION */
 
 .projects {
-  margin: 200px auto 0;
+  margin: 150px auto 0;
+  padding-top: 50px;
   max-width: 1000px;
 
   display: grid;
@@ -231,20 +282,6 @@ a:visited {
   }
 }
 
-#nav {
-  font-family: "Avenir", Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  text-align: right;
-  color: #464646;
-  margin-bottom: 50px;
-  top: 0;
-  right: 0;
-  /*background-color: white;*/
-  padding: 25px 0 5px 35%;
-}
-
 @media screen and (max-width: 900px) {
   #nav {
     padding: 25px 0 5px 0;
@@ -263,12 +300,23 @@ a:visited {
 }
 
 #case-container {
-  width: 60%;
+  width: 55%;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 950px) {
   #case-container {
+    width: 90%;
+  }
+}
+
+#hero-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 950px) {
+  #hero-container {
     width: 90%;
   }
 }
