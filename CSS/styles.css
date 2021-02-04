@@ -226,9 +226,9 @@ a:visited {
 
 .project .image {
   max-width: 100%;
-
+  /*
   transition: 250ms filter;
-  filter: grayscale(60%);
+  filter: grayscale(60%); */
 }
 .project a:hover .image {
   filter: none;
