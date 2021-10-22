@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177865701-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-177865701-1");
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon-01.png" />
+    <title>NerdWallet</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nfw8lgh.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <div id="nav-container">
+        <p id="logo" class="highlight swipe-up"><a href="index.html">J.</a></p>
+        <div id="nav">
+          <ul>
+            <li style="padding-left: 0px">
+              <a href="index.html" class="highlight swipe-right"> Work </a>
+            </li>
+            <li>
+              <a href="about.html" class="highlight swipe-right"> About </a>
+            </li>
+            <li>
+              <a
+                href="Assets/joslyn-tsui-resume.pdf"
+                target="_blank"
+                class="highlight swipe-right"
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="hero-container"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="700"
+        data-aos-delay="0"
+      >
+        <img src="Assets/nw-hero.png" width="100%" />
+      </div>
+
+      <div id="case-container"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="500"
+        data-aos-delay="400"
+      >
+        <h1>NerdWallet</h1>
+        <p>
+          Role: Product Designer <br />
+          Timeline: 8 Weeks <br />
+          Team: 1 Designer, 1 UX Researcher, 1 Content Strategist, 3 Engineers, 1 Product Manager <br />
+          <br />
+        </p>
+
+        <h2>Context</h2>
+        <p>
+          <a
+            href="https://www.nerdwallet.com/"
+            class="highlight swipe-up"
+            target="_blank"
+            >NerdWallet</a
+          >
+           is a fintech company with a mission to provide clarity for 
+          all of life’s financial decisions. A part of the product helps users 
+          compare offers (ie. credit cards, mortgages, loans, etc.) to find the 
+          best one for them. I worked specifically on the Mortgages Offer 
+          Comparison experience; where users can filter down all possible 
+          mortgages to just the ones that are relevant to them.
+        </p>
+        <p class="callout">
+            A tool to help users compare mortgages and find the best one for them
+        </p>
+        <br />
+
+        <h2>The Problem</h2>
+        <p>
+            <a href="https://www.nerdwallet.com/mortgages/mortgage-rates"
+            class="highlight swipe-up"
+            target="_blank"> The comparison tool </a>
+            is a key driver of SEO. However, the 
+            experience is outdated and therefore not fully meeting user needs. In 
+            the original experience, users go through a series of questions (also 
+            known as the pre-qual flow) about what they are looking for. Once 
+            these questions are answered, users are then shown a list of the most 
+            relevant offers. 
+        </p>
+        <p>
+            Analytics show that there is a high abandonment rate (~67%) during the 
+            pre-qual flow where users drop off before ever arriving at the final 
+            page displaying the offers. Beyond that, there were also other various 
+            opportunities to improve user experience. 
+        </p>
+        <p>
+            Additionally, during my internship, there was also an ongoing 
+            initiative: “transform with Currency''. Currency is NerdWallet’s 
+            design system that had recently been overhauled to increase 
+            accessibility and consistency. As a result, the typography, layout, 
+            and some components of old designs needed to be updated, including 
+            the mortgage comparison experience.             
+        </p>
+        <p>
+
+        <p class="callout">
+            How might we redesign the current mortgage comparison experience to 
+            better meet user needs, reduce abandonment rate, and increase 
+            click-through rates? 
+        </p>
+        <br />
+
+        <h3>Arriving at the Solution</h3>
+        <h2>Research Findings</h2>
+        <p>
+            The project kicked off with research, discovery, and competitive 
+            analysis. To get a better understanding of where the opportunities 
+            for improvement lied, we conducted stakeholder interviews and looked 
+            at the existing, holistic mortgage shopping experience and past user 
+            research decks. 
+        </p>
+        <img src="Assets/nw-research.png" class="center-img" />
+        <p class="caption">Left: Stakeholder interview notes. Right: User 
+            research decks.</p>
+
+        <p>For market research, we looked at similar experiences in both fintech 
+            and ecommerce. While NerdWallet is a fintech company, a part of the 
+            experience involves shopping for a mortgage, making ecommerce a viable 
+            source of inspiration. </p>
+        <img src="Assets/nw-competitive-analysis.png" class="center-img" />
+        <p class="caption">Competitive analysis</p>
+        </p>
+        <p>Finally, we synthesized all the information gathered and pulled out the 
+            key findings to come up with a few concrete steps to move forward with. 
+        </p>
+
+        <p><b>Key findings:</b></p>
+        <ul>
+          <li>
+            The process of shopping for a home is a long one; users will come and 
+            go on NerdWallet throughout their journey
+          </li>
+          <li>
+            Mortgage shoppers are always doing research and wanting to learn more 
+          </li>
+          <li>
+            The ability to personalize generates value 
+            <ul>
+                <li>
+                    Users want results to be tailored to their situation and they 
+                    often have more than one possible scenario that they’d like to 
+                    explore 
+                </li>
+            </ul>
+          </li>
+          <li>
+            Non-negotiable features that make for a good shopping experience are: 
+            filter, sort, and narrow
+          </li>
+          <li>
+            Similar experiences for other verticals on NerdWallet that show offers 
+            immediately coming from Google’s search engine results page perform 
+            exceptionally well
+          </li>
+          <li>
+            It’s important to consider business and SEO needs
+          </li>
+        </ul>
+        <br> 
+
+        <h2>The Solution</h2>
+        <p>
+            Three major areas of improvement were made, along with updating the 
+            designs per Currency guidelines: 
+        </p>
+        <ol>
+            <li>
+                Improved filtering capabilities & removing the pre-qual flow 
+            </li>
+            <li>
+                Helping users navigate long-form content 
+            </li>
+            <li>
+                Beat my offer feature 
+            </li>
+        </ol>
+        <br />
+
+        <h3>Improvement Breakdown & Decisions</h3>
+        <h2>Improved Filtering</h2>
+        <h5>Original Experience</h5>
+        <p>
+            When users google “mortgage rates”, they arrive at the landing page 
+            for the compare mortgage rates experience from Google’s search engine 
+            results page (SERP). Alternatively, they can get there from NerdWallet 
+            global navigation. There they can find the entry point to the pre-qual 
+            flow where they will be asked a series of questions regarding what 
+            they’re looking for. Users only have to go through the pre-qual flow 
+            once as their inputs are saved via cookies. Upon completion, users are 
+            shown a list of relevant mortgages along with filters that can be used 
+            to refine their results. 
+        </p>
+        <img src="Assets/nw-original-flow.png" width="100%">
+        <p class="caption">Original user flow</p>
+        <br> 
+
+        <h5>Redesigned Experience</h5>
+        <h4>
+          Design Decision:
+          <span class="highlight">Remove Redundancy</span>
+        </h4>
+        <p>
+            The filters on the results page adjust the exact same criteria as the 
+            questions asked in the pre-qual flow, making the pre-qual flow 
+            redundant. Given that there is a 67% abandonment rate that occurs 
+            during the pre-qual flow, we decided to remove the flow altogether and 
+            combine the contents of the mortgage comparison landing page (where 
+            the pre-qual entry point lived) with the final page displaying the 
+            offers. That way, users can immediately see mortgages as soon as they 
+            arrive.
+        </p>
+        <img src="Assets/nw-new-flow.png" width="100%">
+        <p class="caption">New, improved user flow</p>
+        <br>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Easy to Access</span>
+        </h4>
+        <p>
+            Given that the pre-qual flow was removed, we wanted to ensure that: 
+            <ol type="a">
+                <li>Users don’t miss the filters</li>
+                <li>Filters can be easily accessed </li>
+            </ol>
+        </p>
+        <p>User research shows that users shopping for mortgages will use the 
+            filters frequently to “scenario plan”. Those filters are being used 
+            as a tool to shop for the best mortgage in any given, plausible 
+            situation. 
+        </p>
+        <p>
+            On mobile, filters were made to be more prominent and to keep users 
+            informed of their search criteria. Compared to the original design 
+            where the access point to filters was small and easy to miss, the 
+            redesign leverages the card component to increase visibility and 
+            touch target. 
+        </p>
+        <img src="Assets/nw-filter-entry.png" class="center-img">
+        <p class="caption">Left: Old filter entry point. Right: New filter 
+            Entry Point.
+        </p>
+        <p>
+            Other general usability improvements were also made to filter on 
+            mobile. Input groups were more distinctly separated to improve 
+            accessibility and scannability while helping users find a specific 
+            input quicker. The filter drawer was reduced from full screen to 
+            two-third screen so that interactive content is within thumb’s reach 
+            (content is within the thumb zone).  
+        </p>
+        <img src="Assets/nw-filter-sheet.png" class="center-img">
+        <p class="caption">Left: Original filter sheet. Middle: New filter sheet.
+            Right: New filter sheet within context of the thumb zone.
+        </p>
+        <br>
+        <p>
+            On desktop and mobile, the filters will appear if the user scrolls 
+            up within the results table. In the original experience, users would 
+            have to scroll all the way back to the top of the table if they wanted 
+            to access the filters. With this redesign interaction, users can easily 
+            access the filters without it being too intrusive and taking screen 
+            real estate away from browsing through offers.
+        </p>
+        <video class="center-img" autoplay loop muted>
+          <source src="Assets/nw-sticky-desktop.mov" type="video/mp4" />
+        </video>
+        <p class="caption">Easy to access filter — Desktop</p>
+
+        <p>
+          This is especially useful on mobile where scrolling all the way back to 
+          the top of the offer table can be tedious if there are many offers. 
+        </p>
+        <div class="center">
+            <video width="40%" autoplay loop muted>
+              <source src="Assets/nw-sticky-mobile.mov" type="video/mp4" />
+            </video>
+          </div>
+          <p class="caption">Easy to access filter — Mobile</p>
+          <br> 
+
+          <h4>
+            Design Decision: 
+            <span class="highlight">Feedback</span>
+        </h4>
+        <p>A previously identified usability issue on desktop was that users 
+            weren’t sure if changing the inputs would change the offers displayed 
+            to them. To address that problem, a clear CTA to refresh the offers 
+            was added. 
+        </p>
+        <img src="Assets/nw-cta.png" class="center-img">
+        <p class="caption">Left: Original inputs. Right: Redesigned inputs with 
+            a clear CTA.
+        </p>
+        <p>Additionally, a brief loading screen is shown upon refresh (even 
+        if the offers have already been loaded) to reassure the user that offers 
+        are being selected based on their inputs. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/nw-skeleton-load.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Skeleton load</p>
+
+        <h5>Past Iterations</h5>
+        <p>A side rail filter on desktop was explored in early stages of the 
+            process. Market research in not just the fintech space but also the 
+            ecommerce space show filters in a side rail to be a popular pattern 
+            due to its ease of access. </p>
+        <img src="Assets/nw-side-filter.png" class="center-img">
+        <p class="caption">Side rail filter exploration</p>
+        <p>However, upon discussion with cross-functional partners and 
+            stakeholders, we realized that it’s not a feasible concept for a 
+            number of reasons: 
+            <ol>
+                <li>NerdWallet’s design system team informed us that it’s not as 
+                    accessible compared to having the filters at the top 
+                </li>
+                <li>Engineering noted that it may not be the most responsive 
+                    solution (when paired with the table of content feature) and 
+                    the desired interaction may be tricky and beyond scope
+                </li>
+            </ol>
+        </p>
+        <br> 
+
+        <h2>Table of Content</h2>
+        <h5>Original Experience</h5>
+        <p>NerdWallet pages tend to be very long and content rich. For the 
+            mortgage comparison experience, there’s a wealth of valuable and 
+            educational information below the offers table. User research shows 
+            that users typically don’t scroll down far enough to read information 
+            below the table on result pages, but that doesn’t mean that the 
+            information isn’t useful.
+        </p>
+
+        <h5>Redesigned Experience</h5>
+        <p>To help users better navigate long form content and find useful 
+            information that will help them make the best financial decision for 
+            them, a table of content component was introduced. </p>
+        <img src="Assets/nw-toc.png" class="center-img">
+        <p class="caption">Left: Table of content on mobile. Right: Table of 
+            content on desktop. 
+        </p>
+        
+        <h4>
+            Design Decision: 
+            <span class="highlight">Page Overview & Landmark</span>
+        </h4>
+        <p>One benefit of the table of content is that it gives users a high level 
+            overview of the page’s content. This will surface potentially useful 
+            information to the user that they may have otherwise missed if they 
+            didn’t know to scroll further down the page. It also helps users keep 
+            track of where they are on the page.
+        </p>
+        <img src="Assets/nw-toc-desktop.png" class="center-img">
+        <p class="caption">Active table of content on desktop</p>
+        <p>On mobile, the table of content is partially collapsed by default so that 
+            part of the page content is still visible within the viewport without 
+            making the table of content too unnoticeable. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/nw-toc-mobile.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Left: Mobile landing. Right: Expandable table of content.
+        </p>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Page Navigation</span>
+        </h4>
+        <p>The table of content can also be used for on page navigation. For users 
+            who are looking for something in particular, they can use it to jump 
+            directly to a specific section. Users can easily get their questions 
+            answered by the information below the offer table and return to browsing 
+            through mortgages seamlessly. </p>
+            <video class="center-img" autoplay loop muted>
+                <source src="Assets/nw-toc-interaction.mov" type="video/mp4" />
+              </video>
+        <p class="caption">Table of content interaction</p>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Always Accessible</span>
+        </h4>
+        <p>On desktop, the table of content is always present in the right rail so 
+            that users can access and use it at any time. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/nw-toc-sticky.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Sticky table of contents on desktop</p>
+        <p>While the table of content scrolls away on mobile (it would take up too 
+            much space otherwise), a “back to top” button appears when the user 
+            starts scrolling up anywhere within the page. That way, they can quickly 
+            and easily get back to the table of content. 
+        </p>
+        <div class="center">
+            <video width="40%" autoplay loop muted>
+              <source src="Assets/nw-back-to-top.mov" type="video/mp4" />
+            </video>
+          </div>
+          <p class="caption">Back to top on mobile</p>
+        
+        <h5>Past Iterations</h5>
+        <p>Early table of content explorations included horizontal tabs rather than 
+            vertical ones. However, this option was quickly ruled out due to its 
+            similarity to an existing component. 
+        </p>
+        <img src="Assets/nw-toc-exploration.png" width="100%">
+        <p>Want to learn more about the work done around the table of contents? Stay 
+            tuned for more details or reach out!
+        </p>
+        <br>
+
+        
+        <h2>Beat My Offer (BMX)</h2>
+        <h5>Original Experience</h5>
+        <p>Within the pre-qual flow, users have the option to enter the details of 
+            an existing offer if they have one. Then, on the results page with all 
+            the offers, the offers are compared against the one that they currently 
+            have. Users will be shown all relevant offers and how much they either 
+            save or lose compared to their current quote. The entry point to the 
+            beat my offer (BMX) feature was disguised as a question and easy to miss. 
+        </p>
+        <img src="Assets/nw-bmx-original.png" width="100%">
+        <p class="caption">Original BMX entry point</p>
+        <p>Furthermore, once on the results page, BMX cannot be accessed again since 
+            the answers inputted from the pre-qual flow are saved in cookies. Users 
+            cannot go back into the pre-qual flow once complete unless they clear 
+            their cookies. 
+        </p>
+        <h5>Redesigned Experience</h5>
+        <p>The BMX entry point was moved to the results page so that it’s always 
+            accessible and visible. User research shows that the mortgage shopping 
+            and home buying process is a long one so users return to NerdWallet 
+            throughout their journey. It’s likely that they may come back at a later 
+            time with an offer but are not able to access the BMX feature. By moving 
+            the entry point to always be present, users can then access it whenever 
+            they need to. 
+        </p>
+        <img src="Assets/nw-bmx-redesigned.png" class="center-img">
+        <p class="caption">Redesigned BMX entry point</p>
+        <br> 
+        <h4>
+            Design Decision: 
+            <span class="highlight">Large Touch Target</span>
+        </h4>
+        <p>Using a card rather than just a button to contain the entry point increases 
+            the touch target so that users don’t miss it. User feedback showed that 
+            this feature is well liked so we want to make it easy to find. 
+            Additionally, a CTA to add a quote was included to increase affordances. 
+        </p>
+        <br>
+        <img src="Assets/nw-bmx-entry.png" width="100%">
+        <p class="caption">BMX touch target (on mobile)</p>
+        <br>
+        <h4>
+            Design Decision: 
+            <span class="highlight">Moment of Delight</span>
+        </h4>
+        <p>The home buying process can be a tedious and stressful one so we wanted to 
+            ncorporate as many moments of delight as possible. If there are offers 
+            better than the one that the user currently has, we want to celebrate that! 
+            We worked with the brand studio team to create a short celebratory animation 
+            that rains confetti and money. 
+        </p>
+        <img src="Assets/nw-bmx-confetti.png" class="center-img">
+        <p class="caption">Moment of delight: celebratory moment</p>
+        <p>Accompanying the animation is a snackbar informing the user just how much 
+            money they can save. 
+        </p>
+        <h4>
+            Design Decision: 
+            <span class="highlight">Keep Users Informed</span>
+        </h4>
+        <p>Keeping accessibility in mind, information regarding how much money the user 
+            can save is displayed within the BMX card even after the animation and 
+            snackbar has faded away along with the inputted quote to keep the user 
+            informed. 
+        </p>
+        <br>
+        <img src="Assets/nw-bmx-filled.png" width="100%">
+        <p class="caption">Informative and accessible filled BMX card</p>
+        <br>
+        <h5>Past Iterations</h5>
+        <p>We explored two card concepts for the BMX entry point on mWeb. Concept A has 
+            a clearer CTA but concept B takes up less vertical screen real estate. 
+            Ultimately, we opted for concept B to get users to the offers quicker. 
+            Additionally, by going with the shorter card, more of the results table will 
+            be visible within the viewport. Additionally, with concept A, there may be 
+            too many conflicting CTAs. 
+        </p>
+        <img src="Assets/nw-bmx-cards.png" class="center-img">
+        <p class="caption">Left: Concept A. Right: Concept B.</p>
+        <p>In the first iteration of the moment of delight, the celebratory moment was 
+            displayed in a modal. During a design review, another designer raised the 
+            concern that the modal may be intrusive and inaccessible. 
+        </p>
+        <img src="Assets/nw-bmx-modal.png" width="100%">
+        <p class="caption">First iteration of BMX's celebratory moment</p>
+        <p>Jamming with another designer, we explored various other concepts before I 
+            finally arrived at design. The iterations leading up to the final design 
+            were either too intrusive or not delightful enough. 
+        </p>
+        <img src="Assets/nw-bmx-explorations.png" class="center-img">
+        <p class="caption">BMX celebratory  moment explorations</p>
+        <p>The final animation paired along with the snackbar and note within the card 
+            strikes the right balance between delightful, non-intrusive, and accessible. 
+        </p>
+        <br>
+
+        <h3>Other Concept Explorations</h3>
+        <h2>Saving Offers</h2>
+        <p>User research shows that users aren’t always ready to commit to an offer and 
+            will return at a later time. To encourage users to come back to NerdWallet, 
+            being able to save offers will make it easier for them to find what they were 
+            previously looking at. 
+        </p>
+        <img src="Assets/nw-saving.png" class="center-img">
+        <p class="caption">Saving specific offers exploration (mobile & desktop)</p>
+        <p>However, this introduced a lot of engineering complexity (ie. Where would offers 
+            be saved to? Do users have to be logged into a NerdWallet account? Cookies? 
+            etc.) so we did not move forward with it.
+        </p>
+        <br>
+        <h2>Flagging, Narrowing, and Organizing</h2>
+        <p>Given that users are thinking of multiple scenarios, the concept of flagging 
+            offers can help users narrow down from many offers to a few. To take it one step 
+            further, users could even mark each offer with a different colour/tag to keep 
+            track of their decision making process. 
+        </p>
+        <img src="Assets/nw-flagging.png" class="center-img">
+        <p class="caption">Flagging and labelling offers exploration (mobile & desktop)</p>
+        <p>While the PM liked the idea, he was cautious of introducing a whole new feature 
+            during a redesign. Additionally, a feature like this would be out of scope for 
+            this project. 
+        </p>
+        <br>
+
+        <h3>Conclusion</h3>
+        <h2>Impact</h2>
+        <p>While this project hasn’t shipped yet, the work done has already had a visible 
+            impact. The research done around improving the mortgage comparison experience 
+            was transferable to other similar experiences in different verticals (ie. 
+            personal loans, credit cards, banking, etc). The emphasis placed on improving 
+            filter capabilities in this experience inspired the work on another team that 
+            was formed to redesign filters on NerdWallet. My PM liked some of the concepts 
+            so much that he brought them to the rest of the Product team to see how they 
+            can be incorporated into other parts of the product.
+        </p>
+        <p>Additionally, the table of content component led to the second project of my 
+            internship that ultimately resulted in the creation and proposal of a new 
+            component to be introduced into Currency (NerdWallet’s design system). Want to 
+            learn more about it? Stay tuned for a separate case study!
+        </p>
+        <br>
+
+        <h2>Takeaways</h2>
+        <h4>Confidence & ownership</h4>
+        <p>Through this internship, I realized how important it was to have the 
+            confidence to truly advocate for users. It’s scary to own an entire project 
+            and be the one at the table to speak up but over the course of the summer, 
+            I gained the confidence to defend my decisions. I learned how to think deeply 
+            about what we were doing and respectfully pushback or question decisions, 
+            using research and data to empower my rationale. This was the first time I 
+            truly felt the weight of the responsibility that designers have to our users 
+            and what it means to advocate for them. 
+        </p>
+        <h4>Designing with constraints</h4>
+        <p>Through past experiences, I’m familiar with designing within resource and 
+            technological constraints. However, this was the first time I had to 
+            balance various stakeholders and design within an existing product. These 
+            constraints came with some extra considerations as I couldn’t just do 
+            whatever was best for the user. I had to balance user needs with business n
+            eeds and consider how my designs would affect and fit into the rest of the 
+            product. 
+        </p>
+        <h4>Storytelling & communication</h4>
+        <p>I picked up a lot of soft skills over this summer, such as how to present my 
+            work to stakeholders. Turns out that preparing your work for review and 
+            feedback takes more time and effort than I thought. I found myself setting 
+            aside time just to prepare for design reviews and really thinking it through 
+            as if it were a “formal” presentation. I realized how valuable good 
+            storytelling skills were and actively strived to strengthen those skills by 
+            sharing my work often and with different audiences. In doing so, I learned 
+            that a part of storytelling and communication is knowing your audience and 
+            tailoring your presentation accordingly. 
+        </p>
+        <h4>Cross-functional collaboration </h4>
+        <p>While this isn’t the first time I’ve worked in a cross-functional team, I 
+            still learned a lot from the engineers, PM, content strategist, and user 
+            researcher. Their input is invaluable in guiding and backing decisions. 
+            Through this project, I learned how to truly leverage each partner, when to 
+            loop in who, and how to turn feedback into productive discussions. While it 
+            may open a few rabbit holes that can slow down the velocity, I realized that 
+            sometimes, you just need to stop overthinking and bias towards action 
+            despite ambiguity and uncertainty. 
+        </p>
+        <br>
+        <p>Want to read more about my NerdWallet internship? Check out 
+            <a href="https://medium.com/nerdwallet-design/design-doesnt-always-go-according-to-plan-and-that-s-okay-2d92019a6538"
+            class="highlight swipe-up"
+            target="_blank"> this blog post </a> I 
+            wrote for NerdWallet’s Design blog! </p>
+      </div>
+
+      <div class="end-container">
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #464646;
+            text-align: center;
+            margin-top: 150px;
+          "
+        >
+          Say hello at
+          <span class="highlight"
+            ><a href="mailto:joslyn.tsui@gmail.com">joslyn.tsui@gmail.com</a
+            >
+        </div>
+
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 15px;
+            color: #a1a1a1;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+          "
+        >
+          Made with lots of googling and one coconut.
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
