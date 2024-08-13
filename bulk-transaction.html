@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177865701-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-177865701-1");
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon-01.png" />
+    <title>Bulk Transaction</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nfw8lgh.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <div id="nav-container">
+        <p id="logo" class="highlight swipe-up"><a href="index.html">J.</a></p>
+        <div id="nav">
+          <ul>
+            <li style="padding-left: 0px">
+              <a href="index.html#work" class="highlight swipe-right"> Work </a>
+            </li>
+            <li>
+              <a href="about.html" class="highlight swipe-right"> About </a>
+            </li>
+            <li>
+              <a
+                href="Assets/joslyn-tsui-resume.pdf"
+                target="_blank"
+                class="highlight swipe-right"
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="hero-container"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="700"
+        data-aos-delay="0"
+      >
+        <img src="Assets/bt-hero.png" width="100%" />
+      </div>
+
+      <div id="case-container"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="500"
+        data-aos-delay="400"
+      >
+        <h1>Bulk Transaction</h1>
+        <p>
+          Role: Product Designer <br />
+          Timeline: 5 Weeks <br />
+          Team: 1 Designer, 6 Engineers, 1 Product Manager <br />
+          <br />
+        </p>
+
+        <h2>Context</h2>
+        <p>
+          <a
+            href="https://www.bitgo.com/"
+            class="highlight swipe-up"
+            target="_blank"
+            >BitGo</a
+          >
+          serves institutions, helping them custody their digital assets securely and providing services where they can then deploy their capital.These institutions custody billions of dollars with BitGo and often move these funds to many different places for a variety of reasons, such as end of day settlements. 
+        </p>
+        <p class="callout">
+            Help users move more funds, faster. 
+        </p>
+        <br />
+
+        <h2>The Problem</h2>
+        <p>
+            There isn’t a scalable way for users to initiate multiple transactions at once. Withdrawals had to be initiated one by one, making it incredibly tedious and time consuming to run day to day operations. The more transactions there were to process, the more frustrating it became. 
+        </p>
+        <p>
+
+        <p class="callout">
+            How might we initiate hundreds of transactions as if it was only one? 
+        </p>
+        <br />
+
+
+        <h3>Arriving at the Solution</h3>
+        <p>
+            The solution was very ambiguous and we had no idea how to even begin tackling it, so we started by sitting down with users to get an understanding of how they’re currently processing multiple transactions. We wanted to know how users kept track of the transactions that needed to be processed, how many transactions they’re typically processing, and identify patterns (if any) in the amount, origin, and destination of their transactions. 
+        </p>
+
+        <p><b>Key findings:</b></p>
+        <ul>
+          <li>
+            Funds are typically being dispersed from a centralized place ie. a handful of wallets to many wallets
+          </li>
+          <li>
+            Users use spreadsheets and CSVs to keep track of the transactions they need to process 
+          </li>
+        </ul>
+
+        <p>
+            Once we synthesized these findings, the solution quickly became clear. To get alignment, we mapped out the ideal flow and shared it with engineering to see if it would be feasible. We worked cross-functionally to settle on an MVP flow that would deliver value in the short-term while still keeping the north star flow in our back pockets for future iterations.
+        </p>
+        <br>
+
+        <img src="Assets/bt-flow.png" class="center-img" />
+        <p class="caption">MVP user flow</p>
+        <br> 
+
+        <h2>The Process</h2>
+        <p>This project went through two releases, the first shipping the MVP and the second with improvements. Throughout both releases, I followed a highly collaborative process. I worked closely with my cross-functional partners and sought out feedback often and early. 
+        </p>
+
+        <img src="Assets/bt-process.png" class="center-img">
+        <p class="caption">The process for both releases of this feature</p>
+        <br>
+
+        <h2>The Solution</h2>
+        <p>
+            The solution is broken down into three major steps:   
+        </p>
+        <p class="callout">
+            Upload a CSV containing all the transactions, sign and initiate the transactions, and confirm successful bulk transaction. 
+        </p>
+        
+        <br />
+
+        <h3>Feature Breakdown & Decisions</h3>
+        <h2>Clear Instructions</h2>
+        <p>
+            CSVs can be tricky. To ensure that the user’s CSV will be read and parsed correctly by our system, a CSV template is provided with instructions for correct formatting. 
+        </p>
+        <img src="Assets/bt-landing.png" class="center-img">
+        <p class="caption">CSV template download, instructions, and CSV upload</p>
+        <br> 
+
+        <h4>
+          Design Decision:
+          <span class="highlight">Full Screen</span>
+        </h4>
+        <p>
+            The experience spans the full screen so that users could have as much real estate as possible to focus on their task. It eliminates distractions and provides more space for information, giving users the confidence that the transactions they are about to initiate were the ones they intended. 
+        </p>
+
+        <h5>Past Iterations</h5>
+        <p>The existing pattern that a single withdrawal used was a drawer. At first, to maintain consistency, the bulk transaction experience followed the same pattern. However, we quickly realized that a bulk withdrawal is far more complex and heavy than a singular one, thus having a full screen experience was far more suitable than cramming everything into a drawer.  </p>
+        <img src="Assets/bt-drawer-exploration.png" width="100%">
+        <p class="caption">Drawer exploration</p>
+        <br>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Instruction Toggle</span>
+        </h4>
+        <p>
+            For a new user, the instructions are incredibly helpful in navigating and learning the new feature. However, for an expert user, it would be a distraction. As a user becomes more familiar with bulk transactions, they can choose to hide the instructions so that they can just get right into their task. 
+        </p>
+
+        <video class="center-img" autoplay loop muted>
+          <source src="Assets/bt-toggle.mov" type="video/mp4" />
+        </video>
+        <p class="caption">Instructions that can be toggled on or off</p>
+
+
+          <h4>
+            Design Decision: 
+            <span class="highlight">Easily Identify & Fix Errors</span>
+        </h4>
+        <p> When working in bulk and at scale, it’s easy to make mistakes and hard to catch them. Furthermore, there are a lot of things that could go wrong, such as typos, unsupported assets, or overspending etc. Specific and detailed error messages with clear instructions on how to correct the errors provide users with a clear path forward. 
+        </p>
+        <img src="Assets/bt-errors.png" class="center-img">
+        <p class="caption">All the different errors that could occur during a bulk transaction
+        </p>
+        <p>If the list of errors is long, the header containing the call-to-action (CTA) is sticky to remain accessible to the user. No matter where they are in the list, they won’t have to scroll to find the CTA to move forward. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/bt-sticky-header.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Always accessible CTA</p>
+
+        <h5>Past Explorations</h5>
+        <p>There were deep explorations of fixing errors directly in the product rather than having the user go back into excel/sheets to fix the errors and then re-upload the CSV. While that would have been a better user experience, after syncing with Product, the reward didn’t justify the effort, especially for an edge case.  </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/bt-edit-error.mov" type="video/mp4" />
+          </video>
+          <p class="caption">Fixing CSV errors directly in the product exploration</p>
+        <br> 
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Moment of Delight & Feedback</span>
+        </h4>
+        <p> Once the CSV has been uploaded with no errors and users are ready to move forward, the transactions will be processed and built underneath the hood. It only takes a few seconds but it’s an opportunity to incorporate some delight with an animation and inform users that transactions aren’t broadcasted yet; they will have a chance to verify before initiation. Additionally, the feedback reassures users that things are happening.  
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/bt-transaction-building.mov" type="video/mp4" />
+          </video>
+          <p class="caption">Transactions processing. Fun fact: this was all prototyped with Figma variables!</p>
+        <br> 
+
+
+        <h2>Signing Transactions </h2>
+        <p>In crypto, wallets can be thought of as accounts. Each wallet has a password that encrypts the key needed to sign the transactions from that wallet. How that translates to the experience is that for every wallet a user is transacting out of, they need to input that wallet’s password. 
+        </p>
+        <img src="Assets/bt-signing.png" class="center-img">
+        <p class="caption">Signing transactions, wallet by wallet</p>
+        
+        <h4>
+            Design Decision: 
+            <span class="highlight">Verify Transactions</span>
+        </h4>
+        <p>As users are about to sign and initiate the transactions from any given wallet, they are given one more opportunity to view and confirm that the transactions that were parsed from the CSV are correct and as intended for that wallet. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/bt-verify-transactions.mov" type="video/mp4" />
+          </video>
+
+        <p>Even though the transactions displayed are a direct reflection of the uploaded CSV, a few key design decisions were made to improve scannability: 
+            <ol>
+                <li>Since transactions are initiated on a wallet per wallet basis, show only the transactions from the current respective wallet. Don’t show transactions from other wallets. 
+                </li>
+                <li>Remove the wallet ID & coin columns. Since the transactions are all from the same wallet, it is repetitive. It can simply be displayed alongside the wallet name instead. 
+                </li>
+            </ol>
+        </p>
+        <img src="Assets/bt-clean-up.png" class="center-img">
+        <p class="caption">Left: transaction table before simplification. Right: transaction table after simplification</p>
+
+        <h5>Past Iterations</h5>
+        <p>A different layout where more space was given for transaction verification was explored. However, feedback showed that by having required actions at the bottom of the page, it felt secondary/optional, rather than the primary action. Furthermore, verifying the transactions did not need so much space, especially with how the data was ultimately scoped and simplified.   
+        </p>
+        <img src="Assets/bt-old-layout.png" width="100%">
+        <br>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">On-Chain Preview</span>
+        </h4>
+        <p>After a transaction has been initiated, users typically go to the respective blockchain explorers to verify the transaction on chain. Whenever possible, BitGo will group multiple transactions from the same wallet into one on-chain transaction to save on fees. Users are empowered by this information and can initiate bulk transactions confidently knowing what to expect.  </p>
+            <video class="center-img" autoplay loop muted>
+                <source src="Assets/bt-transaction-grouping.mov" type="video/mp4" />
+              </video>
+        <p class="caption">All the different on-chain previews</p>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Keep Track of Progress</span>
+        </h4>
+        <p>To help users keep track of multiple transacting wallets, a progress bar informs the user of how many wallet’s transactions have already been signed and initiated. It also shows users how many wallets remain to guide and motivate users through a potentially lengthy process. 
+        </p>
+        <img src="Assets/bt-progress-bar.png" class="center-img">
+        <p class="caption">Progress bar during transaction signing</p>
+
+        <p>Additionally, if users abandon their bulk transaction mid-signing, an exit confirmation modal is used for the following reasons: 
+            <ol>
+                <li>Confirm that users truly intend to quit and it wasn’t a misclick  
+                </li>
+                <li>Inform users of which transactions had already been initiated since transactions are initiated immediately after signing on a wallet by wallet basis
+                </li>
+            </ol>
+        </p>
+        <img src="Assets/bt-exit-confirmation-modal.png" class="center-img">
+        <p class="caption">Exit bulk transaction confirmation</p>
+        
+        <h5>Past Iterations</h5>
+        <p>The progress bar placement in the first release caused a bit of confusion. Feedback indicated that users thought the progress bar was associated to each individual wallet rather than to the entire bulk transaction. 
+        </p>
+        <img src="Assets/bt-old-progress-bar.png" width="100%">
+        <p class="caption">Progress bar placement – first release</p>
+        <p>Following basic Gestalt principles, the progress bar was moved from the wallet signing container to the header to associate it with the entire process rather than the individual wallet. 
+        </p>
+        <br>
+
+        
+        <h2>Confirmation & Feedback</h2>
+        <p>Once all transactions have been signed and initiated, users receive confirmation that the bulk transaction was successfully processed. Included are finalized details such as total amount withdrawn and the status of each individual transaction.
+        </p>
+        <img src="Assets/bt-confirmation.png" class="center-img">
+        <p class="caption">Bulk transaction initiated confirmation</p>
+        
+        <h4>
+            Design Decision: 
+            <span class="highlight">Details in a New Tab</span>
+        </h4>
+        <p>While the confirmation page contains only a high level overview of the processed transactions, each transaction has a details page that users can then dig into. Users can easily follow up on each transaction through the link out to the transaction details in a new tab. 
+        </p>
+        <br>
+        <img src="Assets/bt-new-tab.png" class="center-img">
+        <p class="caption">Screenshot of the hand-off note left for Engineering calling out to open links in new tabs as well as detailing the link destinations</p>
+        <br>
+        <p>This was a small but impactful change as in the initial release of this feature, the links to the details would open in the same tab. That results in users only being able to view details for one wallet and have to manually navigate to the other wallets. By opening the details in a new tab, users maintain access to the confirmation page and can use that to better navigate through multiple transaction details. </p>
+        
+        <h5>Past Iterations</h5>
+        <p>After the initial release, feedback was received indicating that the confirmation page lacked a critical detail: the transaction status. 
+        </p>
+        <img src="Assets/bt-old-confirmation.png" width="100%">
+        <p class="caption">Bulk transaction confirmation – first release</p>
+        <p>For the second release, we added in the transaction status as well as cleaned up the layout to better utilize the space and improve scannability. 
+        </p>
+        
+
+        <h3>Other Explorations</h3>
+        <p>Early during ideation, a way to stay updated on the progress as the bulk transaction was processing while being able to still do other tasks on BitGo was explored. 
+        </p>
+        <img src="Assets/bt-other-explorations.png" width="100%">
+        <p>AHowever, during a design review with engineering, it became clear that this design was not necessary because two assumptions that I had made were incorrect: 
+            <ol>
+                <li><s>All transactions would be initiated at the same time, after all authentications had been received</s> → transactions are actually initiated on a wallet by wallet basis 
+                </li>
+                <li><s>Processing and initiating multiple transactions could take up to a few minutes</s> → it actually only takes a few seconds at most 
+                </li>
+            </ol>
+        </p>
+        <br>
+
+        <h3>Conclusion</h3>
+        <h2>Impact</h2>
+        <p class="callout">
+            Shipped x2 🚀This feature is used daily by users to process hundreds of transactions, saving them countless hours  
+        </p>
+        <p>Many strategic clients were able to scale their operations with the release of this feature. Through bulk transactions, users are able to initiate hundreds of transactions within minutes. While this feature was built for a specific use case and persona, we saw more usage than we expected due to an unexpected use case: saving on fees. Since transactions are grouped into one on-chain transaction where possible, users only get charged the fee for one transaction rather than multiple. 
+        </p>
+        <br>
+
+        <h2>If I had more time...</h2>
+        <h4>Better discoverability</h4>
+        <p>I’m still not entirely happy with the entry point into the feature. It’s a bit buried/hidden, making the flow awkward because there were concerns that this was more of a power feature. With the data now knowing that all users benefit from this feature, I’d want to revisit that and have the entry point in a more natural place. </p>
+
+        <h4>Alternatives to CSVs</h4>
+        <p>For users who are just initiating a handful of transactions to save on fees, a whole CSV may be unnecessary. I’d like to explore other ways to input multiple transactions aside from CSVs so that users can use this feature with less friction. </p>
+
+        <h4>Reduce 2FA repetition</h4>
+        <p>Two-factor authentication is required along with the wallet password for each transacting wallet. Depending on the user’s 2FA method, it can get pretty annoying. I’d like to open a conversation with the risk team to ideally have a longer time window in which an authentication is valid so that users only have to authenticate once rather than with every wallet. </p>
+        <br>
+
+
+        <h2>Takeaways</h2>
+        <h4>Understand the tech first</h4>
+        <p>This project went through a few rounds of iteration, some of which could have been reduced had I better understood how the tech of building and initiating a transaction worked before designing. Luckily, I stated my assumptions and reviewed designs early and often thus catching the major misunderstandings in flows early on without having spent too much time designing. 
+        </p>
+        <h4>Pick your battles</h4>
+        <p>There were a lot of things I wanted to advocate for, but I learned that with limited time and resourcing, I had to pick my battles and save my breath for the things that I truly felt strongly for and would have the most impact on the user. 
+        </p>
+        <h4>Ship → iterate → ship …</h4>
+        <p>Getting to iterate on a feature that I first introduced into the product was a great learning experience. Being able to get to the P1s felt good and it was interesting to see how the feedback evolves. It made me proud to watch the feature grow past the MVP to be more fully fleshed out. 
+        </p>
+        
+      </div>
+
+      <div class="end-container">
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #464646;
+            text-align: center;
+            margin-top: 150px;
+          "
+        >
+          Say hello at
+          <span class="highlight"
+            ><a href="mailto:joslyn.tsui@gmail.com">joslyn.tsui@gmail.com</a
+            >
+        </div>
+
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 15px;
+            color: #a1a1a1;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+          "
+        >
+          Made with lots of googling and one coconut.
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
