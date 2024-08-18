@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177865701-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-177865701-1");
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon-01.png" />
+    <title>Activity Page</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nfw8lgh.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <div id="nav-container">
+        <p id="logo" class="highlight swipe-up"><a href="index.html">J.</a></p>
+        <div id="nav">
+          <ul>
+            <li style="padding-left: 0px">
+              <a href="index.html#work" class="highlight swipe-right"> Work </a>
+            </li>
+            <li>
+              <a href="about.html" class="highlight swipe-right"> About </a>
+            </li>
+            <li>
+              <a
+                href="Assets/joslyn-tsui-resume.pdf"
+                target="_blank"
+                class="highlight swipe-right"
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="hero-container"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="700"
+        data-aos-delay="0"
+      >
+        <img src="Assets/ac-hero.png" width="100%" />
+      </div>
+
+      <div id="case-container"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="500"
+        data-aos-delay="400"
+      >
+        <h1>Activity Page</h1>
+        <p>
+          Role: Product Designer <br />
+          Timeline: 6 Weeks <br />
+          Team: 1 Designer, 3 Engineers, 1 Product Manager <br />
+          <br />
+        </p>
+
+        <h2>Context</h2>
+        <p>
+          <a
+            href="https://www.bitgo.com/"
+            class="highlight swipe-up"
+            target="_blank"
+            >BitGo</a
+          >
+          serves institutions, helping them custody their digital assets securely and providing services where they can then deploy their capital. These institutions custody billions of dollars with BitGo and are very security conscious.  
+        </p>
+        <p>
+            They set up policies for their enterprises and if a transfer or action breaches the policy, an approval from administrator(s) is required. For example, a policy can be: if a withdrawal exceeds $1M, require approval from 2 administrators. The activity page is the hub to view pending requests (as an initiator) and approve/reject all the pending approvals (as an approver).</p>
+        <p class="callout">
+            A tool to manage digital asset movement & activities across the entire enterprise 
+        </p>
+        <br />
+
+        <h2>The Problem</h2>
+        <p>
+            The activity page is central to users’ workflows and users often manage many pending approvals. However, the original experience is very bare bones, rigid, and has usability issues at scale. The more requests a user has, the more difficult it is for them to manage. 
+        </p>
+        <p>
+            Additionally, there are situations where further action is required of the initiator once all required approvals have been received. With the existing organization of the page, users are often missing those additional actions, causing delays, confusion, and frustration.           
+        </p>
+
+        <p class="callout">
+            How might we improve the user experience of the activity page, especially at scale? 
+        </p>
+        <br />
+
+        <h3>Arriving at the Solution</h3>
+        <p>
+            It all started with a simple request from BitGo’s product operations team, an internal power user of the product, to add some filters to the page. It was a commonly received request along with sorting capabilities. The Product Manager and I quickly realized that there are a plethora of improvements to be made and filter/sort alone aren’t enough to solve the underlying pain points. So rather than taking feature requests to the page at face value, we went and spoke to users to find the root problem.
+
+        </p>
+
+        <p><b>Pain points:</b></p>
+        <ul>
+          <li>
+            Important, urgent actions are buried
+          </li>
+          <li>
+            Difficult to stay up to date on requests  
+          </li>
+          <li>
+            It’s not always apparent why an approval is required
+          </li>
+          <li>
+            Approving requests one by one is tedious 
+          </li>
+        </ul>
+
+
+        <p><b>Key findings:</b></p>
+        <ul>
+          <li>
+            Approvals aren’t just one and done; users often want to stay updated on the request
+            <ul>
+                <li>
+                    Some requests have rather long life cycles, depending on how the policy is configured
+                </li>
+            </ul>
+          </li>
+          <li>
+            To minimize confusion, approvers often coordinate approvals outside the product 
+          </li>
+          <li>
+            When users are making the decision to approve or reject a request, the more information they have, the faster and more confidently they can act
+          </li>
+        </ul>
+
+        <p>
+            We also looked at all the different required actions that could occur to better understand the use cases that needed to be supported 
+        </p>
+        <img src="Assets/ac-actions.png" class="center-img">
+        <p class="caption">All possible required actions analysis</p>
+        <br>
+
+        <p>
+            Afterwards, the findings were synthesized and shared out to the team. I wanted to ensure that everyone working on the project understood the problems that we were solving and saw the value in what we could deliver. As I was designing, I reviewed often with cross-functional partners. I also leveraged the fact that we had internal users to test and validate early and iterate fast. 
+        </p>
+        <img src="Assets/ac-process.png" class="center-img">
+        <p class="caption">The process</p>
+        <br> 
+
+        <h2>The Solution</h2>
+        <p>
+            Beyond just filtering & sort, the solution turned out to be a mix of improvements and new features:
+        </p>
+        <p class="callout">
+            Surface urgent actions, improved organization & paradigm, more details, and bulk approve capabilities
+        </p>
+        
+        <br />
+
+        <h3>Improvement Breakdown & Decisions</h3>
+        <h2>Improved Organization & Information Architecture </h2>
+        <h5>Original Experience</h5>
+        <p>
+            Back when the product was simpler, splitting requests into requests pending other user approval and requests initiated by the user was sufficient. But as the product grew and became more powerful, the two table format no longer made sense as the life cycle of a request became more sophisticated. It resulted in required actions being scattered across the two tables, causing users to miss these actions. 
+        </p>
+        <img src="Assets/ac-original.png" width="100%">
+        <p class="caption">Original activity page</p>
+        <br> 
+
+        <h5>Improved Experience</h5>
+        <h4>
+          Design Decision:
+          <span class="highlight">Unify & Surface Actions</span>
+        </h4>
+        <p>
+            To accommodate the growing variety of actions that users need to tend to, all requests were merged into one table with requests requiring user action to be bubbled to the top in order of descending urgency. Section headers are used to help visually break the table up a little without being as distinct as the previous design of two tables, thus allowing requests to move fluidly between the sections as necessary. Sections are collapsible to help with the management of many requests. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-sections.mov" type="video/mp4" />
+          </video>
+          <p class="caption">Sectioning and surfacing actions from everything else, in one table</p>
+          <br>
+        <p>
+            This organization is the default because research showed that users typically come to the activity page knowing exactly what they’re looking for and will use filters or search. The second most common method users use to find a request is by initiation time. Within sort, users have the ability to toggle off the grouping of requests by action to get a true chronological sort. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-sort.mov" type="video/mp4" />
+          </video>
+          <p class="caption">Grouping by action or true chronological sort</p>
+
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">A New Paradigm</span>
+        </h4>
+        <p>
+            The condition in which a request gets dismissed from the activity page was changed. There are now two tabs: in progress and past. Rather than dismissing a request once the required action was complete, it now only dismisses once the request was either completed or rejected. Once a request reaches the end of its life cycle, it can be found in the past tab. This enables users to easily stay up to date on all requests they’re involved in, even as an approver.
+        </p>
+        <img src="Assets/ac-life-cycle.png" class="center-img">
+        <p class="caption">Left: Old paradigm. Right: New paradigm. 
+        </p>
+        <p>
+            User research showed that with the original paradigm, there’s often confusion when a request gets approved by someone else, leaving the user wondering on how the request concluded, if at all.  
+        </p>
+        <img src="Assets/ac-illustration.png" width="100%">
+        <p class="caption"> Illustrations by
+            <a
+            href="https://notioly.com/"
+            target="_blank"
+            >@maryamato88</a
+          >
+        </p>
+        <br>
+        <p>
+            The past tab solves that confusion by informing the user of which request was resolved, and how, while they were away. When a request reaches the end of its life cycle and lands in the “past” tab, it will be badged to help users distinguish which concluded request(s) was unseen. 
+        </p>
+        <img src="Assets/ac-past.png" class="center-img">
+        <p class="caption">Past tab</p>
+        <br>
+
+        <h2>Providing More Information</h2>
+        <p>
+            Pending approvals are a result of an action breaching a policy, which can be alarming. Users are assessing what the next steps are and the more details they have, the more informed they are.
+        </p>
+        <img src="Assets/ac-details.png" class="center-img">
+        <p class="caption">Pending approval details
+        </p>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Policy Details</span>
+        </h4>
+        <p>
+            Each request has a details page. Two improvements were made to this page: 
+            <ol>
+                <li>Policy timeline: full preview of what approvals need to be collected and from who to push the request to completion so that approvers can better coordinate amongst themselves
+                    <img src="Assets/ac-timeline.png" width="100%">
+                    <p class="caption">Left: original timeline. Right: new timeline.</p> <br>
+                </li>
+                <li>Policy trigger(s): provide context to the user as to why they’re being asked to approve a particular request
+                    <video class="center-img" autoplay loop muted>
+                        <source src="Assets/ac-trigger.mov" type="video/mp4" />
+                      </video>
+                </li>
+            </ol>
+        </p>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Status Definitions</span>
+        </h4>
+        <p>There are a lot of states that a request can be in. Some states are pending on other approvers, BitGo, or the user themselves. In-product definitions of the states were added to help educate users. The drawer format enables users to have the reference on hand without disrupting their task. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-status-education.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Request status definitions</p>
+        
+        <h5>Past Iterations</h5>
+        <p>
+            Tooltips on the status itself were explored. However, having the tooltip icon repeat itself down the entire column creates a lot of visual noise. Additionally, users had to learn each status one by one as they encountered them, which is more tedious and inefficient. 
+        </p>
+        <img src="Assets/ac-status-tooltip.png" width="100%">
+        <br> <br> <br>
+
+        
+        <h2>Video ID Hub</h2>
+        <p>
+            For high-risk withdrawals, users are required to get on a video call with BitGo to authenticate the transaction. Users need to verify certain details of the withdrawal as well as complete an identification check. After speaking to BitGo’s operations team, we learned that users often verify multiple transactions in one call. 
+        </p>
+        <h5>Original Experience</h5>
+        <p>
+            To find the details that are needed during the verification call, users have to click into the details to pull up the right information. Sometimes, they’d have to go into the individual wallets to find the transactions. This is tedious and frustrating for everyone involved and leads to longer delays. 
+        </p>
+        <h5>Improved Experience</h5>
+        <p>
+            All withdrawals pending video ID were gathered in one, easily accessible place. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-video-id-entry.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Video ID hub entry point</p>
+        <p>
+            Within the hub, only the relevant details during a video ID call are shown. With this feature, users are able to quickly and easily pull up all the transactions that need verification and have all the information needed right at their fingertips. 
+        </p>
+        <img src="Assets/ac-video-id-hub.png" class="center-img">
+        <p class="caption">Video ID hub</p>
+        <h5>Past Iterations</h5>
+        <p>
+            While users often verify multiple transactions, they may not verify all that are pending video ID verification. One iteration explored the concept of “snoozing” transactions to help users keep track of which transactions they wanted to verify on that particular call. However, it was de-scoped to P1 as there were improvements and features that would be more valuable. 
+        </p>
+        <img src="Assets/ac-snooze.png" width="100%">
+        <br>
+
+        <h2>Bulk Authorization</h2>
+        <p>
+            To authorize a request, two-factor authentication is required. For some requests, a password entry will also be required. This makes authorizing multiple requests very repetitive and tedious, especially if the user’s 2FA method is one-time passwords (OTP) generated by an authenticator app as they would have to wait 30 seconds for the code to refresh before they can authorize the next request. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-single-approval.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Authorizing a single request</p>
+        <p>
+            The ability to bulk action was introduced, enabling users to authorize multiple requests under one two-factor authentication. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-selection.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Selecting multiple requests to authorize. Figma variables made this super easy to prototype!</p>
+        <p>
+            Users still need to verify the details of all the requests they’re authorizing. In crypto, wallets can be thought of as accounts, and some wallets have a password. To authorize requests from those wallets, the wallet password is required, so requests are grouped by wallets where possible. Then, requests are further grouped by action to make the details easier to scan. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-bulk-approve.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Verifying requests. Requests grouped by wallet and then similar actions.</p>
+        <h4>
+            Design Decision: 
+            <span class="highlight">Collapse Verified Requests</span>
+        </h4>
+        <p>
+            As users go through the requests and input the individual wallet passwords, the section for that wallet will then be collapsed to remove distraction and help users focus on the next batch of requests. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-collapse.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Collapsing verified requests</p>
+        <h5>Past Iterations</h5>
+        <p>
+            One iteration explored having all the authentication pieces gathered at the end so that users could just verify the details and then authenticate all at once. However, user feedback showed that they would prefer to have more friction to force the approver to take the time to verify the details. Users felt that this concept would make it too easy for approvers to be careless and make mistakes. 
+        </p>
+        <img src="Assets/ac-authenticate-at-once.png" width="100%">
+        <br> <br>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Track Authorization Progress</span>
+        </h4>
+        <p>
+            Once a bulk authorization has been initiated, the requests will be processed in the background. Rather than blocking users from doing anything else in the product while the authorization is running, users can complete other tasks while staying up to date on which requests have been authorized. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-approval-progress.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Tracking authorization progress while completing other tasks </p>
+        <p>
+            One common, yet painful, use case bulk authorization solves is onboarding new users. When a new user joins an enterprise and is invited to multiple wallets, it may take hours to accept each individual wallet invitation. With bulk authorization, users can accept hundreds of wallet invitations in the same time it takes to accept one. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-bulk-accept.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Bulk accept invitations</p>
+        <br>
+
+        <h2>Overall Visual Polish</h2>
+        <p>
+            A few visual design changes were also made to add some polish and make the activity page easier to scan: 
+            <ol>
+                <li>
+                    Standardizing button widths & using secondary buttons rather than primary 
+                </li>
+                <li>
+                    Reduce number of columns 
+                </li>
+                <li>
+                    Readability: <s>1 of 2 approvals</s> → 1 remaining 
+                </li>
+                <li>
+                    Scannability: colour coordinated status badges 
+                </li>
+            </ol>
+        </p>
+        <img src="Assets/ac-visual-polish.png" class="center-img">
+        <p class="caption">Left: original activity page. Right: new activity page</p>
+        <br>
+        <p>
+            For the request details page, interaction design was leveraged. Rather than having static copy buttons everywhere, they now only appear on hover. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/ac-copy.mov" type="video/mp4" />
+          </video>
+          <p class="caption">Copy on hover</p>
+
+
+        <h3>Conclusion</h3>
+        <h2>Impact</h2>
+        <p class="callout">
+            Partially shipped 🚀 partially in development 🚧
+        </p>
+        <p>
+            The feedback for the pieces that are shipped are positive. Important and urgent actions were no longer being missed – users now have a much easier time identifying what tasks they need to do. With the addition of more details and the paradigm shift, requests are being resolved in less time with less confusion and frustration. 
+        </p>
+        <p>
+            Furthermore, the video ID hub was a huge hit with video ID verifiers and BitGo’s operations team. By identifying and solving for this pain point, video ID verifications became much more efficient, saving time for both the user and the operations team. 
+        </p>
+        <br>
+
+        <h2>Takeaways</h2>
+        <h4>The power of interaction design & prototyping</h4>
+        <p>
+            Interactions offer a lot of elegant and simple solves, but are often hard to think of when looking and designing on static screens. Through this project, I realized how many solutions are hidden between screens. Prototypes become monumental in communicating and collecting feedback; I really got to hone my prototyping chops and became fairly comfortable with variables. 
+        </p>
+        <img src="Assets/ac-variables.png" class="center-img">
+        <p class="caption">A snippet of the figma components & variables used to create the prototypes you see in this case study</p>
+        <h4>Thinking ahead</h4>
+        <p>
+            We always knew that we wanted the activity page to be more powerful. The vision is for it to become a place to oversee everything that’s happening in the enterprise, not just requests. It was an interesting exercise, designing with the vision in mind. I had to balance making sure the designs were flexible and scalable for the future but still solved the problems that exist today. 
+        </p>
+        <h4>Iterate & validate fast</h4>
+        <p>
+            It’s such a privilege to have power users just a slack away. I really leveraged our internal users throughout the ideation process to quickly validate ideas. Being able to validate quickly and early gave the team a lot more confidence in what we were building. It made navigating the early stages of the design process much less daunting. 
+        </p>
+      </div>
+
+      <div class="end-container">
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #464646;
+            text-align: center;
+            margin-top: 150px;
+          "
+        >
+          Say hello at
+          <span class="highlight"
+            ><a href="mailto:joslyn.tsui@gmail.com">joslyn.tsui@gmail.com</a
+            >
+        </div>
+
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 15px;
+            color: #a1a1a1;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+          "
+        >
+          Made with lots of googling and one coconut.
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
