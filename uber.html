@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177865701-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-177865701-1");
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon-01.png" />
+    <title>Uber</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nfw8lgh.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <div id="nav-container">
+        <p id="logo" class="highlight swipe-up"><a href="index.html">J.</a></p>
+        <div id="nav">
+          <ul>
+            <li style="padding-left: 0px">
+              <a href="index.html#work" class="highlight swipe-right"> Work </a>
+            </li>
+            <li>
+              <a href="about.html" class="highlight swipe-right"> About </a>
+            </li>
+            <li>
+              <a
+                href="Assets/joslyn-tsui-resume.pdf"
+                target="_blank"
+                class="highlight swipe-right"
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="hero-container"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="700"
+        data-aos-delay="0"
+      >
+        <img src="Assets/pt-hero.png" width="100%" />
+      </div>
+
+      <div id="case-container"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-duration="500"
+        data-aos-delay="400"
+      >
+        <h1>Pending Tab</h1>
+        <p>
+          Role: Product Designer <br />
+          Timeline: 6 Weeks <br />
+          Stakeholders: 4 teams <br />
+          <br />
+        </p>
+
+        <h2>Context</h2>
+        <p>
+          <a
+            href="https://www.uberfreight.com/"
+            class="highlight swipe-up"
+            target="_blank"
+            >Uber Freight</a
+          >
+          is a digital freight brokerage that matches shippers with carriers. Shippers post loads that need hauling to the loadboard while carriers browse the loadboard and decide on loads to haul. I was on the 
+          <a href="https://www.uberfreight.com/carrier/"
+          class="highlight swipe-up"
+          target="_blank"> Carrier Experience Team </a>, dedicated to helping truck drivers find, book, and haul loads through the carrier app. I worked specifically on finding and booking loads. 
+        </p>
+        <p class="callout">
+            Helping carriers find and book loads that need hauling
+        </p>
+        <br />
+
+        <h2>The Problem</h2>
+        <p>
+            Back when Uber Freight had fewer product offerings, the structure of the carrier app could be more simple. As more product offerings and features were introduced, the app structure was revised to accommodate. As a result, a new tab was introduced. 
+        </p>
+        <img src="Assets/pt-app-structure.png" width="100%">
+        <p class="caption">1 – New tab: Pending</p>
+        <p>
+            The Pending Tab was created but not much further thought was put into it. It has the potential to be really powerful for carriers but in its original state, it was just a dumping ground for various features. It results in many missed loads, which is bad for both users and the business.           
+        </p>
+        <p>
+
+        <p class="callout">
+            How might we make the Pending Tab more intuitive and help carriers find the best loads to result in an increase of booked loads 
+        </p>
+        <br />
+
+
+        <h3>Arriving at the Solution</h3>
+        <h2>Discovery & Research</h2>
+        <p>
+            First, I started by understanding why the Pending Tab was introduced and how it’s different from other tabs. I went through the research decks for the app structure revamp and interviewed all stakeholders. Finally, I synthesized the findings into stories for each of the relevant tabs. 
+        </p>
+        <img src="Assets/pt-tab-stories.png" class="center-img" />
+        <p class="caption">Carrier app tab stories</p>
+
+        <p>
+            Next, I set out to learn about all the different features that affect the Pending Tab and why. I mapped out the life cycle of a load and all the different flows to see where it could end up.
+        </p>
+        <img src="Assets/pt-flows.png" class="center-img" />
+        <p class="caption">Left: bidding flows. Right: dedicated lanes flows.</p>
+        </p>
+        <p>
+            Afterwards, I took all those findings and brought it back to the user. I assessed all the different states a load can be in and what that means to the truck driver. For each state, I looked at it through two lenses: intent to action (high to low) and conversion possibility (high to low). 
+        </p>
+        <img src="Assets/pt-load-states.png" class="center-img" />
+        <p class="caption">Top: intent to action. Bottom: conversion possibility.</p>
+        </p>
+        <p>
+            Once I felt I had a good grasp on the Pending Tab, I zoomed out to the rest of the experience to see how the Pending Tab fits in. User journeys were used to understand how carriers feel at each touchpoint in the load hauling experience. 
+        </p>
+        <img src="Assets/pt-journey-maps.png" class="center-img" />
+        <p class="caption">Top: happy path. Bottom: unhappy path.</p>
+        </p>
+        <p>
+            By this point, I was ready to start designing. Before putting pixels down, I had to first identify which design elements were needed. I drilled down to the core of the Pending Tab and started solving for the most common scenarios first. Four scenarios were identified: 
+        </p>
+        <ol>
+          <li>
+            A load has been reserved for the user 
+          </li>
+          <li>
+            Looking for specific load 
+          </li>
+          <li>
+            Deciding on a load to book
+          </li>
+          <li>
+            Recovering/replacing a lost load
+          </li>
+        </ol>
+        <img src="Assets/pt-scenario-planning.png" class="center-img" />
+        <br> 
+
+        <h2>The Solution</h2>
+        <p>
+            Deliverables included designs for what the pending tab should be with the current product offers as well as a scalable, future-proof framework for how users use this tab. 
+        </p>
+        <p class="callout">
+            A scalable framework for how users use and navigate the Pending Tab
+        </p>
+        <br />
+       
+
+        <h3>Feature Breakdown & Decisions</h3>
+        <h2>Pending Tab Context</h2>
+        <p>
+            Loads in the pending tab are loads that the user has expressed interest in but haven’t booked yet. There are a few ways that a user can “express interest” in a load: 
+        </p>
+        <ol>
+            <li>
+                <b>Bidding: </b>if a user sees a load they want to haul but the price isn’t ideal, they can bid on the load. If the bid is won, the user has to accept within a time window in which the load is reserved exclusively for them. If they don’t accept in time, the load is released and could get booked by another carrier. 
+            </li>
+            <li>
+                <b>Dedicated lanes: </b>users can sign up for routes that they run often. Loads on those routes will be tendered to the user. When a dedicated haul is tendered to the user, they have to accept it within a time window in which the load is reserved exclusively for them. If they don’t accept in time, the load is released and could get booked by another carrier. 
+            </li>
+            <li>
+                <b>Bookmarking: </b>users can bookmark a load to decide on at a later time. These loads are not reserved exclusively for the user and could be booked by another carrier at any time. 
+            </li>
+        </ol>
+        <p class="callout">
+            The Pending Tab houses loads that the user has expressed interest in, but has not booked yet. 
+        </p>
+
+
+
+        <h2>Notify Users of New Loads</h2>
+        <p>
+            Some loads are more urgent and time-sensitive than others so we want to surface those in a timely manner and bring them front and center of the user. 
+        </p>
+       
+        <h4>
+          Design Decision:
+          <span class="highlight">Badging the Pending Tab</span>
+        </h4>
+        <p>
+            To draw the user’s attention to the Pending Tab, a notification badge is used to inform users that there are loads to be seen. When there are time-sensitive loads (ie. loads reserved for the user), a tooltip is used to further reinforce the badge and prompt user attention without being too intrusive. 
+        </p>
+        <img src="Assets/pt-notification.png" class="center-img">
+        <p class="caption">1 – Notification badge. 2 – Tooltip.</p>
+        <br>
+        <h5>Past Explorations</h5>
+        <p>
+            A more aggressive and persistent banner was explored. Right off the bat we knew that there would be some conflicts as when a haul is in progress, it utilizes a bottom sheet. Ultimately, we didn’t move forward with this exploration because there was data that showed with the current notification system that’s much more subtle than this, users weren’t missing time-sensitive loads anyways. 
+        </p>
+        <img src="Assets/pt-banner.png" class="center-img">
+        <br>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Separate Home for Reserved Loads</span>
+        </h4>
+        <p>
+            Loads that are reserved for the user are the most urgent and time-sensitive as they’re only held exclusively for that carrier for a limited time. For that reason, they’re separated out from other, less urgent loads. 
+        </p>
+        <p>
+            When the user enters the Pending Tab and there are reserved loads, the reserved loads hub will immediately take over the experience automatically. This ensures that users don’t miss these time-sensitive loads. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/pt-takeover.mov" type="video/mp4" />
+          </video>
+          <p class="caption">Reserved loads full sheet takeover</p>
+          <br>
+        <p>
+            We don’t want to block users from looking at other loads as they often compare loads against each other. However, they should be able to easily get back to the reserved loads once a decision has been made. An accessible entry point to the reserved loads hub solves for that. 
+        </p>
+        <img src="Assets/pt-reserved-entry.png" class="center-img">
+        <p class="caption">Accessible entry point to reserved loads</p>
+        <br>
+        <h5>Past Explorations</h5>
+        <p>
+            Past iterations explored simply bumping reserved loads to the top of the page above passive loads. During stakeholder review, the feedback received indicated that these time-sensitive loads should feel more differentiated than other loads. There were also scalability concerns. 
+        </p>
+        <img src="Assets/pt-reserved-exploration.png" class="center-img">
+        <br>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Badging New, Unseen Loads</span>
+        </h4>
+        <p>
+            When a reserved load times out, it will still show up in the Pending Tab, just not under “reserved”. It is still a load of interest to the user, but less urgent as there is no time limit to book. The goal here is to inform users that there are new loads in the Pending Time while maintaining context. New loads that the user hasn’t seen are badged to visually differentiate from old loads. 
+        </p>
+        <img src="Assets/pt-badge.png" class="center-img">
+        <p class="caption">1 – Badge to visually differentiate unseen loads. 2 – More unseen loads indicator.</p>
+        <br>
+        <p>
+            Taking into consideration the device is mobile and the likelihood of a new load being below the fold, navigational elements were also introduced for ease of use.
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/pt-jump.mov" type="video/mp4" />
+          </video>
+          <p class="caption">Navigating multiple unseen loads</p>
+          <br>
+        <h5>Past Explorations</h5>
+        <p>
+            One iteration explored simply bumping new loads to the top. The cons is that new loads can only be easily compared against other new loads. It also causes weird interactions as the Pending Tab is organized by pick up date – once a load has been viewed, how would it slot back into the rest of the tab?
+        </p>
+        <img src="Assets/pt-new-load-exploration.png" class="center-img">
+        <br>
+
+        <h2>Find & Identify Specific Loads</h2>
+        <p>
+            Since there can be many loads in the Pending Tab that wind up there for a variety of different reasons, we want to help users navigate the content and provide context. 
+        </p>
+        
+        <h4>
+            Design Decision: 
+            <span class="highlight">Label Load Origin</span>
+        </h4>
+        <p>
+            Each load has its origin labeled. This way, users can quickly see at a glance identify why a load is in the Pending Tab. User research shows that the “origin” is a way to make quick decisions. For example, won bids have the highest conversion rate whereas bookmarked/pinned are lower. 
+        </p>
+        <img src="Assets/pt-origin.png" class="center-img">
+        <p class="caption">1 – the reason a load is in the Pending Tab</p>
+        <br>
+        <h5>Past Explorations</h5>
+        <p>
+            One iteration explored grouping loads by their origins. During review, we felt that while it’s important for users to know why a load is in the Pending Tab, it doesn’t need to be this prominent and take up so much space. 
+        </p>
+        <img src="Assets/pt-origin-explo.png" class="center-img">
+        <br>
+
+        <h4>
+            Design Decision: 
+            <span class="highlight">Sort & Filter</span>
+        </h4>
+        <p>
+            To accommodate for the scenario where a user is coming into the Pending Tab to check on a load (ie. edit bid price, booking a bookmarked load, etc.), filters are used to help users easily find a specific load.
+         </p>
+         <img src="Assets/pt-filter.png" class="center-img">
+         <p class="caption">1 – Filter by load pending reason</p>
+         <br>
+         <p>
+            Progressive disclosure is used to keep the filter sheet from becoming too cluttered.
+         </p>
+         <video class="center-img" autoplay loop muted>
+            <source src="Assets/pt-progressive-disclosure.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Progressively disclosing filter parameters</p>
+        <br>
+        <h5>Past Explorations</h5>
+        <p>
+            A two other common filter patterns were explored but ultimately ruled out for three reasons: 
+            <ol>
+                <li>
+                    They take up a lot of header space, taking away valuable real estate from the main content: viewing loads. 
+                </li>
+                <li>
+                    Filtering is a secondary, less common task for the Pending Tab, therefore doesn’t need as much prominence.
+                </li>
+                <li>
+                    Being a subsidiary of Uber, we’re able to leverage the research findings from other parts of the org. Uber Eats found that these filter patterns perform poorly. 
+                </li>
+            </ol>
+        </p>
+        <img src="Assets/pt-filter-exploration.png" class="center-img">
+        <br>
+
+
+        
+        <h2>Decide on a Load</h2>
+        <p>
+            Going back to the targeted metric of this project, we want users to be booking more loads on Uber Freight. Rather than users comparing loads on Uber Freight and other brokerages, we want them to compare Uber Freight loads against other Uber Freight loads. 
+        </p>
+        <h4>
+            Design Decision: 
+            <span class="highlight">Organize by Date</span>
+        </h4>
+        <p>
+            Understanding carriers’ mental models when deciding on loads was key to determining how the Pending Tab should be organized. Users typically plan day by day and care more about date and location.
+        </p>
+        <img src="Assets/pt-illustration.png" width="100%">
+        <p class="caption"> Illustrations by
+            <a
+            href="https://notioly.com/"
+            target="_blank"
+            >@maryamato88</a
+          >
+        </p>
+        <br>
+        <p>
+            Rather than shipping the org chart or features, loads were sorted by pick up date to match users’ mental models. It’s simple, flexible, and scalable. It allows for a mixing of load origins in a way that makes sense, easily accommodating for a wide range of potential configurations.
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/pt-date.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Organizing loads by date</p>
+        <br>
+        <h5>Past Explorations</h5>
+        <p>
+            Three other organization models were explored: 
+            <ol type="a">
+                <li>
+                    Default sort based on when the load hit the Pending Tab, newest to oldest. While this option is flexible and enables users to configure the tab in a way that works best for them, it requires a lot of upfront work from users.
+                </li>
+                <li>
+                    Splitting out loads into tabs by status. This structure is too rigid and isn’t scalable. 
+                </li>
+                <li>
+                    Splitting out loads into load origin. This design makes it hard for users to see loads which doesn’t make sense when users primarily come to Uber Freight to see loads.
+                </li>
+            </ol>
+        </p>
+        <img src="Assets/pt-organization-explorations.png" class="center-img">
+        <br>
+
+        <h4>
+            Feature: 
+            <span class="highlight">Suggested Sort: Likelihood to Book</span>
+        </h4>
+        <p>
+            Taking what we learned from user research, we implemented a suggested sort that is based on conversation possibility & business needs.
+        </p>
+        <img src="Assets/pt-conversion.png" class="center-img">
+        <p class="caption">Pending Tab loads: likelihood to book</p>
+        <br>
+
+        <h2>Find Alternatives</h2>
+        <p>
+            When a load is lost (ie. booked by another carrier), users are anxious to replace them. They want to find similar loads. Additionally, users change their minds often. They may decline a load and then decide to book it later if they can’t find anything better. 
+        </p>
+        <h4>
+            Design Decision: 
+            <span class="highlight">Maintain Context</span>
+        </h4>
+        <p>
+            When a load is lost or declined, it stays in the same place so that the change in status can be clearly communicated to the user. This way, users always know where to go to check on the status of a load. To keep the Pending Tab from being too cluttered, lost/declined loads are collapsed, but expandable. 
+        </p>
+        <video class="center-img" autoplay loop muted>
+            <source src="Assets/pt-sections.mov" type="video/mp4" />
+          </video>
+        <p class="caption">Lost or declined loads</p>
+        <br>
+        <p>
+            Badges are used to alert users of an unseen load status change. The status is also clearly communicated on the load itself alongside the origin to mitigate any confusion. 
+        </p>
+        <img src="Assets/pt-lost-load-details.png" class="center-img">
+        <p class="caption">1 - Notification badge. 2 - Load status & origin</p>
+        <br>
+        <h5>Past Explorations</h5>
+        <p>
+            Three other concepts was explored:
+            <ol type="a">
+                <li>
+                    Two tabs: one for available loads and one for “dead” loads. This concept did have its pros such as clear hierarchy and easily identifiable, but ultimately, it doesn’t maintain context as well as the final solution did. 
+                </li>
+                <li>
+                    Tucked in kebab: while the team liked giving the full attention to available loads and the ability to differentiate between lost vs. decline loads, there were concerns about discoverability. 
+                </li>
+                <li>
+                    Visually differentiated “dead” loads from available loads. This was the iteration that the final solution evolved from. The biggest con with this iteration was that it would clutter the Pending Tab, thus resulting in the final design that utilizes collapsed sections. 
+                </li>
+            </ol>
+        </p>
+        <img src="Assets/pt-graveyard-explorations.png" class="center-img">
+        <br>
+        <h4>
+            Feature: 
+            <span class="highlight">Replace & Recover</span>
+        </h4>
+        <p>
+            When a load that the user is interested in gets booked by another carrier (ie. lost bid, didn’t book in time, etc.), users will be notified that the load is no longer available and can browse other similar loads. This enables users to quickly and easily replace the lost load. 
+        </p>
+        <img src="Assets/pt-replace.png" class="center-img">
+        <p class="caption">Replacing a lost load</p>
+        <br>
+        <p>
+            Knowing that users change their minds often, declined loads are treated similarly to lost loads. Declined loads are intentionally kept in the Pending Tab (but collapsed to help users focus on interested available loads) so that users can easily come back and book it. 
+        </p>
+        <img src="Assets/pt-recover.png" class="center-img">
+        <p class="caption">Recovering a declined load</p>
+        <br>
+
+        <h3>Conclusion</h3>
+        <h2>Impact</h2>
+        <p class="callout">
+            The framework now guides the Carrier Experience team in all things Pending Tab
+        </p>
+        <p>
+            While the designs are under development, the framework was presented to the entire Uber Freight Design Org. As the framework is meant to act as a guide for designers and how they treat the Pending Tab, it’s been adopted by the Carrier Experience team and guides all future Carrier App designs, especially those pertaining to the Pending Tab. 
+        </p>
+        <br>
+
+        <h2>Takeaways</h2>
+        <h4>Working in ambiguity</h4>
+        <p>
+            This was a really conceptual and ambiguous project with many different problems. The hardest part was figuring out where to start – right off the bat I tried to solve every problem under the sun and getting overwhelmed. I learned that it’s okay to not solve everything right away and to take it one problem at a time. By solving each problem independently, the solution lies in their intersections. Plus, it’s a much better way to work without melting my brain 😅
+        </p>
+        <h4>Momentum ≠ progress</h4>
+        <p>
+            Just because pixels are being pushed doesn’t mean the project is progressing. At one point I was just designing in circles. To break out of the cycle, I needed to reset and really get to the root of the problem. I had to ask myself “are my designs actually solving the problem or just the symptoms”? It also helped to go down one level of fidelity to keep myself from getting too caught up in the details – this was when I truly understood what low-fidelity mocks are used for.
+        </p>
+        <h4>System thinking</h4>
+        <p>
+            The name of the project is a bit misleading as the scope of it isn’t necessarily contained to just one tab. This was a holistic project that doesn’t happen in a vacuum, nor does it have a clear flow beginning or end. To find an elegant solution, it’s a constant balance of zooming out and zooming in. And even though you’re designing within a system, you shouldn’t be constrained to existing patterns. Sometimes a new pattern is a better solution than an existing one. 
+        </p>
+        <h4>Stakeholder management </h4>
+        <p>
+            This was the first time I had to manage multiple stakeholders, all of which being other teams across Carrier Experiences. It was difficult to juggle and balance each team's wants and needs, especially business needs. I learned that I, as the designer of a design-led initiative, had to take ownership, prioritize, and make decisions. You can’t make everyone happy but that doesn’t matter because the user comes first. Always. 
+        </p>
+      </div>
+
+      <div class="end-container">
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #464646;
+            text-align: center;
+            margin-top: 150px;
+          "
+        >
+          Say hello at
+          <span class="highlight"
+            ><a href="mailto:joslyn.tsui@gmail.com">joslyn.tsui@gmail.com</a
+            >
+        </div>
+
+        <div
+          style="
+            font-family: 'proxima-nova', Helvetica, sans-serif;
+            font-size: 15px;
+            color: #a1a1a1;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+          "
+        >
+          Made with lots of googling and one coconut.
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
